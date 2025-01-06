@@ -177,6 +177,40 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="src\assets\css\bootstrap-reboot.min.css" />
+    <Content Include="src\assets\css\bootstrap.min.css" />
+    <Content Include="src\assets\css\styles.css" />
+    <Content Include="src\assets\fonts\Roboto\LICENSE.txt" />
+    <Content Include="src\assets\img\arrow-down-line-secondary.svg" />
+    <Content Include="src\assets\img\arrow-down-secondary.svg" />
+    <Content Include="src\assets\img\arrow-rounded-square-secondary.svg" />
+    <Content Include="src\assets\img\arrows-right-white-icon.svg" />
+    <Content Include="src\assets\img\best-friend-vector.svg" />
+    <Content Include="src\assets\img\canada-flag.svg" />
+    <Content Include="src\assets\img\circle-green.svg" />
+    <Content Include="src\assets\img\clipboard-list-bold.svg" />
+    <Content Include="src\assets\img\coffee-white-icon.svg" />
+    <Content Include="src\assets\img\dislike-outline-bold.svg" />
+    <Content Include="src\assets\img\dislike-outline.svg" />
+    <Content Include="src\assets\img\email-sign.svg" />
+    <Content Include="src\assets\img\family-vector.svg" />
+    <Content Include="src\assets\img\house-vector.svg" />
+    <Content Include="src\assets\img\info-circle-linear.svg" />
+    <Content Include="src\assets\img\like-outline-bold.svg" />
+    <Content Include="src\assets\img\like-outline.svg" />
+    <Content Include="src\assets\img\LingUpLogo.svg" />
+    <Content Include="src\assets\img\Logo-Vector.svg" />
+    <Content Include="src\assets\img\mic-icon.svg" />
+    <Content Include="src\assets\img\native-speaker-icon.svg" />
+    <Content Include="src\assets\img\round-arrow-right-bold.svg" />
+    <Content Include="src\assets\img\speaker.svg" />
+    <Content Include="src\assets\img\symbols_favorite.svg" />
+    <Content Include="src\assets\img\translate-fill-secondary.svg" />
+    <Content Include="src\assets\img\triangle-top-left.svg" />
+    <Content Include="src\assets\img\user-linear.svg" />
+    <Content Include="src\assets\js\bootstrap.bundle.min.js" />
+    <Content Include="src\assets\js\jquery-3.7.1.min.js" />
+    <Content Include="src\assets\js\script.js" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -219,12 +253,14 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -237,6 +273,18 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.0.min.map" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-Black.ttf" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-BlackItalic.ttf" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-Bold.ttf" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-BoldItalic.ttf" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-Italic.ttf" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-Light.ttf" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-LightItalic.ttf" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-Medium.ttf" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-MediumItalic.ttf" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-Regular.ttf" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-Thin.ttf" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-ThinItalic.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
