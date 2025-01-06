@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LingUp.master.cs" Inherits="LingUpWebsite.LingUpPages.LingUp" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>LingUp</title>
+    <link rel="icon" href="https://lingup.ai/wp-content/uploads/2024/05/Vector-1.svg" sizes="32x32">
+    <link rel="icon" href="https://lingup.ai/wp-content/uploads/2024/05/Vector-1.svg" sizes="192x192">
+    <link rel="apple-touch-icon" href="https://lingup.ai/wp-content/uploads/2024/05/Vector-1.svg">
+    <meta name="msapplication-TileImage" content="https://lingup.ai/wp-content/uploads/2024/05/Vector-1.svg">
+    <link rel="stylesheet" href="/src/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/src/assets/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="/src/assets/css/styles.css">
+    <script src="/src/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/src/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/src/assets/js/script.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+  
+   <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+   </asp:ContentPlaceHolder>
+    
+</body>
+</html>
