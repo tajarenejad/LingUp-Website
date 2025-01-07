@@ -19,3 +19,138 @@
     src: url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype');
 }
 
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --green-deep: #099773;
+    --green-primary: #16a085;
+    --green-light: #43b692;
+    --green-lighter: #60ccaa;
+    --primary-dark-blue: #2c3e50;
+    --neutral-light-blue: #f0f3f5;
+    --neutral-blue-grey: #eceff1;
+    --secondary-dark-grey-cyan: #7f8c8d;
+    --accent-orange: #f9a825;
+    --status-error: #ff6b6b;
+    --radius-8: 8px;
+    --radius-14: 14px;
+    --radius-16: 16px;
+    --radius-24: 24px;
+    --shadow-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    --shadow-2: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    --shadow-3: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);
+    --shadow-4: 0px 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 6px 10px 4px rgba(0, 0, 0, 0.15);
+    --shadow-5: 0px 4px 4px 0px rgba(0, 0, 0, 0.3), 0px 8px 12px 6px rgba(0, 0, 0, 0.15);
+    --shadow-6: 0px 2px 4px 0px rgba(22, 160, 133, 0.2), 0px 5px 15px 0px rgba(21, 182, 150, 0.15);
+    --shadow-7: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 10px !important;
+    border-radius: 6px !important;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4) !important;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--green-primary) !important;
+    border-radius: 6px !important;
+}
+
+::-moz-selection {
+    color: var(--white);
+    background: var(--green-primary);
+}
+
+::selection {
+    color: var(--white);
+    background: var(--green-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+ol,
+li {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 77.5rem;
+    margin: 0 auto;
+}
