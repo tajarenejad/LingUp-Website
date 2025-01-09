@@ -19,7 +19,22 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <header></header>
+     <header>
+      <nav class="navbar">
+        <div class="container">
+          <div class="nav-content">
+            <div class="logo">
+              <a class="navbar-brand" href="https://lingup.ai">
+                <img src="/src/assets/img/LingUpLogo.svg" alt="LingUp Logo" />
+              </a>
+            </div>
+            <div class="navbar-actions">
+              <button type="button" class="btn">Get started</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>
     <footer></footer>
