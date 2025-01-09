@@ -32,10 +32,10 @@
     --secondary-dark-grey-cyan: #7f8c8d;
     --accent-orange: #f9a825;
     --status-error: #ff6b6b;
-    --radius-8: 8px;
-    --radius-14: 14px;
-    --radius-16: 16px;
-    --radius-24: 24px;
+    --radius-8: 0.5rem;
+    --radius-14: 0.875rem;
+    --radius-16: 1rem;
+    --radius-24: 1.5rem;
     --shadow-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
     --shadow-2: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
     --shadow-3: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);
@@ -149,7 +149,7 @@ select:focus {
     box-shadow: none;
 }
 
-.container {
+main > .container:first-of-type {
     width: 100%;
     max-width: 77.5rem;
     margin: 0 auto;
