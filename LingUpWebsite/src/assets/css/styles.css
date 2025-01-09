@@ -194,6 +194,7 @@ main > .container:first-of-type {
     margin: 0 auto;
 }
 
+/*--------------breadcrumb----------*/
 .breadcrumb-wrapper {
     padding: 1.5rem 0;
 }
@@ -230,3 +231,54 @@ main > .container:first-of-type {
     text-decoration: none;
     color: var(--secondary-dark-grey-cyan);
 }
+
+/*------------topics card------------------*/
+.conversation-topics .cards-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.conversation-topics h1 {
+    color: var(--primary-dark-blue);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.cards-wrapper .box {
+    width: 100%;
+    background-color: var(--neutral-light-blue);
+    border-radius: var(--radius-20);
+    padding: 1rem;
+    text-align: center;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: calc(25% - 1rem);
+}
+
+.cards-wrapper .box:hover {
+    background-color: var(--light-gray-blue);
+}
+
+.cards-wrapper .box img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.cards-wrapper .box h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+
+
