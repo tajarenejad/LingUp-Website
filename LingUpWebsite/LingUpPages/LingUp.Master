@@ -4,6 +4,8 @@
 
 <html>
 <head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LingUp</title>
     <link rel="icon" href="https://lingup.ai/wp-content/uploads/2024/05/Vector-1.svg" sizes="32x32">
     <link rel="icon" href="https://lingup.ai/wp-content/uploads/2024/05/Vector-1.svg" sizes="192x192">
@@ -29,7 +31,7 @@
               </a>
             </div>
             <div class="navbar-actions">
-              <button type="button" class="btn">Get started</button>
+               <a href="#" class="link">Get started</a>
             </div>
           </div>
         </div>

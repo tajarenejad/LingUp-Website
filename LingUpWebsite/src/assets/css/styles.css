@@ -492,7 +492,6 @@ footer {
 
     .pagination {
         justify-content: space-between;
-        gap: auto;
         padding: 1rem 0;
         margin-bottom: 0.5rem;
     }

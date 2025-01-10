@@ -121,7 +121,7 @@
                           aria-label="Previous">
                           <span aria-hidden="true">
                               <img
-                                  src="./assets/img/arrow-bold.svg"
+                                  src="/src/assets/img/arrow-bold.svg"
                                   alt="Previous Page"
                                   style="transform: rotate(180deg)" /></span>
                       </a>
@@ -130,7 +130,7 @@
                           href="#"
                           aria-label="Previous">
                           <img
-                              src="./assets/img/arrow-bold.svg"
+                              src="/src/assets/img/arrow-bold.svg"
                               alt="Previous Page"
                               style="transform: rotate(180deg)" />Previous Page</a>
                   </li>
@@ -163,13 +163,13 @@
                   <li class="page-item next">
                       <a class="page-link d-none d-lg-flex" href="#" aria-label="Next">
                           <span aria-hidden="true">
-                              <img src="./assets/img/arrow-bold.svg" alt="Next Page" /></span>
+                              <img src="/src/assets/img/arrow-bold.svg" alt="Next Page" /></span>
                       </a>
                       <a
                           class="page-link next-link d-flex d-lg-none"
                           href="#"
                           aria-label="Next">Next Page<img
-                              src="./assets/img/arrow-bold.svg"
+                              src="/src/assets/img/arrow-bold.svg"
                               alt="Next Page" /></a>
                   </li>
               </ul>
