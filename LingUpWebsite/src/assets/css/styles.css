@@ -299,6 +299,52 @@ main {
         line-height: 2rem;
     }
 
+/* --------pagination---------------- */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem 0;
+    margin-bottom: 0;
+}
+
+    .pagination li {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .pagination .page-link {
+        width: 100%;
+        padding: 0.5rem;
+        color: var(--primary-dark-blue);
+        background: transparent;
+        border: 0;
+        border-radius: 6.25rem;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.5rem;
+        text-align: center;
+        box-shadow: none;
+        outline: 0;
+    }
+
+    .pagination .page-item.active .page-link {
+        background: rgba(22, 160, 133, 0.5);
+    }
+
+    .pagination .page-link:hover {
+        background-color: var(--light-gray);
+        text-decoration: none;
+        box-shadow: none;
+        outline: 0;
+    }
+
+    .pagination .page-item:first-child .page-link,
+    .pagination .page-item:last-child .page-link {
+        border-radius: 6.25rem;
+    }
+
 @media (max-width: 992px) {
     main {
         padding-top: 5rem;
@@ -327,6 +373,34 @@ main {
         font-size: 1.25rem;
         margin-bottom: 1rem;
     }
+    .pagination {
+        justify-content: space-between;
+        gap: auto;
+        padding: 1rem 0;
+        margin-bottom: 0.5rem;
+    }
+
+        .pagination li {
+            width: max-content;
+            height: auto;
+            text-wrap: nowrap;
+        }
+
+        .pagination .previous-link,
+        .pagination .next-link {
+            width: 6.375rem;
+            color: var(--secondary-dark-grey-cyan);
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.5rem;
+        }
+
+        .pagination strong {
+            color: var(--primary-dark-blue);
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.5rem;
+        }
 
     
 }
