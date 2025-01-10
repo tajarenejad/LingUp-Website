@@ -14,85 +14,101 @@
               </nav>
           </div>
 
-            <section class="conversation-topics">
-          <h1>Conversation Topics</h1>
-          <div class="cards-wrapper">
-            <div class="box">
-              <img src="/src/assets/img/family-vector.svg" alt="icon" />
-              <h3>Family</h3>
-            </div>
-            <div class="box">
-              <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
-              <h3>Friends</h3>
-            </div>
+          <section class="conversation-topics">
+              <h1>Conversation Topics</h1>
+              <div class="cards-wrapper">
+                  <div class="box">
+                      <img src="/src/assets/img/family-vector.svg" alt="icon" />
+                      <h3>Family</h3>
+                      <a href="#"></a>
+                  </div>
+                  <div class="box">
+                      <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
+                      <h3>Friends</h3>
+                      <a href="#"></a>
+                  </div>
 
-            <div class="box">
-              <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
-              <h3>Friends</h3>
-            </div>
+                  <div class="box">
+                      <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
+                      <h3>Friends</h3>
+                      <a href="#"></a>
+                  </div>
 
-            <div class="box">
-              <img src="/src/assets/img/house-vector.svg" alt="icon" />
-              <h3>Hometown</h3>
-            </div>
-            <div class="box">
-              <img src="/src/assets/img/family-vector.svg" alt="icon" />
-              <h3>Family</h3>
-            </div>
-            <div class="box">
-              <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
-              <h3>Friends</h3>
-            </div>
+                  <div class="box">
+                      <img src="/src/assets/img/house-vector.svg" alt="icon" />
+                      <h3>Hometown</h3>
+                      <a href="#"></a>
+                  </div>
+                  <div class="box">
+                      <img src="/src/assets/img/family-vector.svg" alt="icon" />
+                      <h3>Family</h3>
+                      <a href="#"></a>
+                  </div>
+                  <div class="box">
+                      <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
+                      <h3>Friends</h3>
+                      <a href="#"></a>
+                  </div>
 
-            <div class="box">
-              <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
-              <h3>Friends</h3>
-            </div>
+                  <div class="box">
+                      <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
+                      <h3>Friends</h3>
+                      <a href="#"></a>
+                  </div>
 
-            <div class="box">
-              <img src="/src/assets/img/house-vector.svg" alt="icon" />
-              <h3>Hometown</h3>
-            </div>
+                  <div class="box">
+                      <img src="/src/assets/img/house-vector.svg" alt="icon" />
+                      <h3>Hometown</h3>
+                      <a href="#"></a>
+                  </div>
 
-            <div class="box">
-              <img src="/src/assets/img/family-vector.svg" alt="icon" />
-              <h3>Family</h3>
-            </div>
-            <div class="box">
-              <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
-              <h3>Friends</h3>
-            </div>
+                  <div class="box">
+                      <img src="/src/assets/img/family-vector.svg" alt="icon" />
+                      <h3>Family</h3>
+                      <a href="#"></a>
+                  </div>
+                  <div class="box">
+                      <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
+                      <h3>Friends</h3>
+                      <a href="#"></a>
+                  </div>
 
-            <div class="box">
-              <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
-              <h3>Friends</h3>
-            </div>
+                  <div class="box">
+                      <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
+                      <h3>Friends</h3>
+                      <a href="#"></a>
+                  </div>
 
-            <div class="box">
-              <img src="/src/assets/img/house-vector.svg" alt="icon" />
-              <h3>Hometown</h3>
-            </div>
+                  <div class="box">
+                      <img src="/src/assets/img/house-vector.svg" alt="icon" />
+                      <h3>Hometown</h3>
+                      <a href="#"></a>
+                  </div>
 
-            <div class="box">
-              <img src="/src/assets/img/family-vector.svg" alt="icon" />
-              <h3>Family</h3>
-            </div>
-            <div class="box">
-              <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
-              <h3>Friends</h3>
-            </div>
+                  <div class="box">
+                      <img src="/src/assets/img/family-vector.svg" alt="icon" />
+                      <h3>Family</h3>
+                      <a href="#"></a>
+                  </div>
+                  <div class="box">
+                      <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
+                      <h3>Friends</h3>
+                      <a href="#"></a>
+                  </div>
 
-            <div class="box">
-              <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
-              <h3>Friends</h3>
-            </div>
+                  <div class="box">
+                      <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
+                      <h3>Friends</h3>
+                      <a href="#"></a>
+                  </div>
 
-            <div class="box">
-              <img src="/src/assets/img/house-vector.svg" alt="icon" />
-              <h3>Hometown</h3>
-            </div>
-          </div>
-        </section>
+                  <div class="box">
+                      <img src="/src/assets/img/house-vector.svg" alt="icon" />
+                      <h3>Hometown</h3>
+                      <a href="#"></a>
+                  </div>
+              </div>
+          </section>
 
 
       </div>
