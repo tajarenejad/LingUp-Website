@@ -37,6 +37,69 @@
     </header>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>
-    <footer></footer>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-7 col-lg-4">
+                    <h5 class="footer-title">Company</h5>
+                    <ul class="footer-list">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-5 col-lg-4">
+                    <h5 class="footer-title">Information</h5>
+                    <ul class="footer-list">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="subscribe-section">
+                        <h4 class="subscribe-title">Subscribe</h4>
+                        <div class="input-group mb-3">
+                            <input
+                                type="email"
+                                class="form-control"
+                                placeholder="Email address"
+                                aria-label="Email address" />
+                            <button
+                                class="btn btn-outline-secondary"
+                                type="button"
+                                id="button-addon"
+                                aria-label="Subscribe">
+                                <img
+                                    src="/src/assets/img/arrows-right-white-icon.svg"
+                                    alt="subscribe" />
+                            </button>
+                        </div>
+                        <p class="description">
+                            Hello, we are Lift Media. Our goal is to translate the positive
+                effects of revolutionizing how companies engage with their
+                clients and their team.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <span>Made with</span>
+                <span>
+                    <img src="/src/assets/img/coffee-white-icon.svg" alt="coffee" />
+                </span>
+                <span>and</span>
+                <span>
+                    <img src="/src/assets/img/symbols_favorite.svg" alt="like" />
+                </span>
+                <span>in</span>
+                <span>
+                    <img src="/src/assets/img/canada-flag.svg" alt="Canada" />
+                </span>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

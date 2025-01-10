@@ -183,6 +183,7 @@
     <Content Include="src\assets\css\bootstrap.min.css" />
     <Content Include="src\assets\css\styles.css" />
     <Content Include="src\assets\fonts\Roboto\LICENSE.txt" />
+    <Content Include="src\assets\img\arrow-bold.svg" />
     <Content Include="src\assets\img\arrow-down-line-secondary.svg" />
     <Content Include="src\assets\img\arrow-down-secondary.svg" />
     <Content Include="src\assets\img\arrow-rounded-square-secondary.svg" />
