@@ -77,6 +77,50 @@
                 </li>
               </ul>
             </div>
+
+            <section class="conversation-topics other-topics">
+                   <h1>Other Conversation Topics</h1>
+                   <div class="cards-wrapper">
+                       <div class="box">
+                           <img src="/src/assets/img/family-vector.svg" alt="icon" />
+                           <h3>Family</h3>
+                           <a href="#"></a>
+                       </div>
+                       <div class="box">
+                           <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
+                           <h3>Friends</h3>
+                           <a href="#"></a>
+                       </div>
+                       <div class="box">
+                           <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
+                           <h3>Friends</h3>
+                           <a href="#"></a>
+                       </div>
+                       <div class="box">
+                           <img src="/src/assets/img/house-vector.svg" alt="icon" />
+                           <h3>Hometown</h3>
+                           <a href="#"></a>
+                       </div>
+                       <div class="box">
+                           <img src="/src/assets/img/family-vector.svg" alt="icon" />
+                           <h3>Family</h3>
+                           <a href="#"></a>
+                       </div>
+                       <div class="box">
+                           <img src="/src/assets/img/best-friend-vector.svg" alt="icon" />
+                           <h3>Friends</h3>
+                           <a href="#"></a>
+                       </div>
+                   </div>
+                   <div class="view-all">
+                       <a href="#">View All
+                  <img
+                      class="view-all-img"
+                      src="/src/assets/img/arrow-bold.svg"
+                      alt="view-other-topics" />
+                       </a>
+                   </div>
+               </section>
           </div>
         </div>
       </div>
