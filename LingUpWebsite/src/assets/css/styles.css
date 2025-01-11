@@ -204,6 +204,39 @@ main {
         margin: 0 auto;
     }
 
+/* ------chat box------------ */
+.aside {
+    background-color: var(--white);
+    min-height: 100vh;
+}
+
+.aside .chat-box {
+    padding: 0px 16px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.aside .chat-card {
+    border: 2px solid var(--primary-dark-blue);
+    border-radius: var(--radius-14);
+    background-color: var(--white);
+    min-height: 656px;
+    width: 100%;
+    max-width: 360px;
+}
+
+.aside .chat-card .card-h {
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid var(--primary-dark-blue);
+}
+
+.aside .chat-card .card-h h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
 .breadcrumb-wrapper {
     padding: 1.5rem 0;
 }
