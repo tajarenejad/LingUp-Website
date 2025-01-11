@@ -45,7 +45,7 @@
             <div class="toc">
               <h2 class="toc-header">
                 <img
-                  src="./assets/img/clipboard-list-bold.svg"
+                  src="/src/assets/img/clipboard-list-bold.svg"
                   alt="Table of Content"
                 />
                 Table of Content
@@ -82,74 +82,58 @@
       </div>
     </main>
 
-    <%-- <script>
-      const aside = document.querySelector(".aside");
-      const footer = document.querySelector("footer");
-      const header = document.querySelector(".navbar");
+    <script>
+        const aside = document.querySelector(".aside");
+        const container = document.querySelector("main .container");
+        const header = document.querySelector(".navbar");
 
-      function adjustasidePosition() {
-        const asideHeight = aside.offsetHeight;
-        const footerTop = footer.getBoundingClientRect().top;
-        const headerHeight = header.offsetHeight;
-        const viewportHeight = window.innerHeight;
+        function adjustasidePosition() {
+            if (!aside || !container || !header) return;
 
-        if (footerTop <= viewportHeight) {
-          aside.style.position = "absolute";
-          aside.style.top = `${footer.offsetTop - asideHeight}px`;
-        } else {
-          aside.style.position = "fixed";
-          aside.style.top = `${headerHeight}px`;
+            const headerHeight = header.offsetHeight;
+            const containerRect = container.getBoundingClientRect();
+            const asideHeight = aside.offsetHeight;
+            const windowHeight = window.innerHeight;
+
+            const containerStyles = window.getComputedStyle(container);
+            const containerPaddingRight = parseFloat(containerStyles.paddingRight);
+
+            const containerRight =
+                window.innerWidth - containerRect.right - containerPaddingRight - 12;
+            console.log("containerPaddingRight", containerPaddingRight);
+            console.log("containerRight :", containerRight);
+            if (
+                containerRect.top <= headerHeight &&
+                containerRect.bottom >= windowHeight
+            ) {
+                aside.style.position = "fixed";
+                aside.style.top = `${headerHeight}px`;
+                aside.style.removeProperty("bottom");
+                aside.style.right = `${containerRight}px`;
+                aside.style.removeProperty("left");
+            } else if (containerRect.bottom <= windowHeight) {
+                aside.style.position = "absolute";
+                aside.style.top = `${container.offsetHeight - asideHeight}px`;
+                aside.style.removeProperty("bottom");
+                aside.style.right = "0";
+                aside.style.removeProperty("left");
+            } else if (containerRect.top > headerHeight) {
+                aside.style.position = "fixed";
+                aside.style.top = `${headerHeight}px`;
+                aside.style.removeProperty("bottom");
+                aside.style.right = `${containerRight}px`;
+                aside.style.removeProperty("left");
+            } else {
+                aside.style.position = "static";
+                aside.style.removeProperty("top");
+                aside.style.removeProperty("bottom");
+                aside.style.removeProperty("right");
+                aside.style.removeProperty("left");
+            }
         }
-      }
 
-      window.addEventListener("scroll", adjustasidePosition);
-     </script>--%>
-
-     <script>
-         const aside = document.querySelector(".aside");
-         const container = document.querySelector("main .container");
-         const header = document.querySelector(".navbar");
-
-         function adjustasidePosition() {
-             if (!aside || !container || !header) return;
-
-             const headerHeight = header.offsetHeight;
-             const containerRect = container.getBoundingClientRect();
-             const asideHeight = aside.offsetHeight;
-             const windowHeight = window.innerHeight;
-
-             if (
-                 containerRect.top <= headerHeight &&
-                 containerRect.bottom >= windowHeight
-             ) {
-                 aside.style.position = "fixed";
-                 aside.style.top = `${headerHeight}px`;
-                 aside.style.removeProperty("bottom");
-                 aside.style.removeProperty("right");
-                 aside.style.left = `${containerRect.left}px`; 
-             } else if (containerRect.bottom <= windowHeight) {
-                 aside.style.position = "absolute";
-                 aside.style.top = `${container.offsetHeight - asideHeight}px`;
-                 aside.style.removeProperty("bottom");
-                 aside.style.removeProperty("right");
-                 aside.style.left = "0"; 
-             } else if (containerRect.top > headerHeight) {
-                 aside.style.position = "fixed";
-                 aside.style.top = `${headerHeight}px`;
-                 aside.style.removeProperty("bottom");
-                 aside.style.removeProperty("right");
-                 aside.style.left = `${containerRect.left}px`;
-             } else {
-                 aside.style.position = "static";
-                 aside.style.removeProperty("top");
-                 aside.style.removeProperty("bottom");
-                 aside.style.removeProperty("right");
-                 aside.style.removeProperty("left");
-             }
-         }
-
-         window.addEventListener("scroll", adjustasidePosition);
-         window.addEventListener("resize", adjustasidePosition);
-         document.addEventListener("DOMContentLoaded", adjustasidePosition);
-     </script>
+        window.addEventListener("scroll", adjustasidePosition);
+        window.addEventListener("resize", adjustasidePosition);
+        document.addEventListener("DOMContentLoaded", adjustasidePosition);
+    </script>
 </asp:Content>
