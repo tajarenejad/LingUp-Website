@@ -494,6 +494,86 @@ footer {
         line-height: 1.75rem;
     }
 
+
+
+.conversation-topic-section h1 {
+    color: var(--primary-dark-blue);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.conversation-topic-section p {
+    color: var(--primary-dark-blue);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+/* -----------table of content----------- */
+.toc {
+    width: 100%;
+    padding: 16px;
+    position: relative;
+}
+
+.toc-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: var(--green-primary);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.toc-icon {
+    margin-right: 8px;
+}
+
+.toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-left: 2px solid #ccc;
+    position: relative;
+}
+
+.toc-item,
+.toc-subitem {
+    position: relative;
+    width: max-content;
+    padding: 8px 0 8px 16px;
+}
+
+.toc-subitem {
+    margin-left: 32px;
+}
+
+    .toc-item > a,
+    .toc-subitem > a {
+        text-decoration: none;
+        color: #333;
+        display: inline-block;
+    }
+
+    .toc-item:hover > a,
+    .toc-subitem:hover > a {
+        color: var(--green-primary);
+    }
+
+    .toc-item:hover::before,
+    .toc-subitem:hover::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 2px;
+        border-radius: 8px;
+        background-color: var(--green-primary);
+    }
+
+
 @media (max-width: 992px) {
     main {
         padding-top: 5rem;
