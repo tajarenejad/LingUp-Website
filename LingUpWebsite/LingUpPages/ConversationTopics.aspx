@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LingUpPages/LingUp.Master" AutoEventWireup="true" CodeBehind="ConversationTopics.aspx.cs" Inherits="LingUpWebsite.LingUpPages.ConversationTopics" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <main>
+     <main class="fixed-sidebar-layout">
       <div class="container">
         <div class="layout">
           <aside class="aside">
@@ -42,7 +42,7 @@
               </p>
             </section>
 
-            <div class="toc">
+                  <div class="toc">
               <h2 class="toc-header">
                 <img
                   src="/src/assets/img/clipboard-list-bold.svg"
@@ -64,18 +64,95 @@
                   <a href="#section4">Title 4</a>
                 </li>
                 <li class="toc-subitem">
-                  <a href="#subsection1">Sub-title 4-1</a>
+                  <a href="#subsection4-1">Sub-title 4-1</a>
                 </li>
                 <li class="toc-subitem">
-                  <a href="#subsection2">Sub-title 4-2</a>
+                  <a href="#subsection4-2">Sub-title 4-2</a>
                 </li>
                 <li class="toc-subitem">
-                  <a href="#subsection3">Sub-title 4-3</a>
+                  <a href="#subsection4-3">Sub-title 4-3</a>
                 </li>
                 <li class="toc-item">
                   <a href="#section5">Title 5</a>
                 </li>
               </ul>
+              <div class="toc-section" id="section4">
+                <h4 class="title-text">Title 4 Topics for Airport</h4>
+                <div class="subTitle-section" id="subsection4-1">
+                  <h6 class="subTitle-text">Sub-title 4-1</h6>
+                  <p class="secondary-text">Sample 1:</p>
+                  <div class="description">
+                    <p>
+                      Say hello to our cutting-edge, AI-driven IELTS Speaking
+                      Part 2 Answer Checker, designed to transform your test
+                      preparation experience! This impressive online tool
+                      provides instant, accurate, and free correction and
+                      evaluation of your IELTS speaking answers, ensuring you’re
+                      on the right track to success. Our advanced AI technology
+                      meticulously assesses your speech, delivering
+                      comprehensive feedback and invaluable insights to help you
+                      excel in both IELTS Academic and General Training. With
+                      this powerful assessment tool at your fingertips, you can
+                      confidently hone your speaking skills and achieve your
+                      desired IELTS score. Experience the future of IELTS test
+                      preparation today – try our innovative IELTS Speaking Part
+                      2 Answer Checker now!
+                    </p>
+                  </div>
+                  <div class="see-more">
+                    <a href="#">
+                      <span
+                        >See more samples on
+                        <strong class="subTitle-text"
+                          >Sub-title 4-1</strong
+                        ></span
+                      >
+                      <img
+                        class="img-arrow"
+                        src="/src/assets/img/round-arrow-right-bold.svg"
+                        alt="arrow-right-circlebackground"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="subTitle-section" id="subsection4-2">
+                  <h6 class="subTitle-text">Sub-title 4-2</h6>
+                  <p class="secondary-text">Sample 2:</p>
+                  <div class="description">
+                    <p>
+                      Say hello to our cutting-edge, AI-driven IELTS Speaking
+                      Part 2 Answer Checker, designed to transform your test
+                      preparation experience! This impressive online tool
+                      provides instant, accurate, and free correction and
+                      evaluation of your IELTS speaking answers, ensuring you’re
+                      on the right track to success. Our advanced AI technology
+                      meticulously assesses your speech, delivering
+                      comprehensive feedback and invaluable insights to help you
+                      excel in both IELTS Academic and General Training. With
+                      this powerful assessment tool at your fingertips, you can
+                      confidently hone your speaking skills and achieve your
+                      desired IELTS score. Experience the future of IELTS test
+                      preparation today – try our innovative IELTS Speaking Part
+                      2 Answer Checker now!
+                    </p>
+                  </div>
+                  <div class="see-more">
+                    <a href="#">
+                      <span
+                        >See more samples on
+                        <strong class="subTitle-text"
+                          >Sub-title 4-1</strong
+                        ></span
+                      >
+                      <img
+                        class="img-arrow"
+                        src="/src/assets/img/round-arrow-right-bold.svg"
+                        alt="arrow-right-circlebackground"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <section class="conversation-topics other-topics">
