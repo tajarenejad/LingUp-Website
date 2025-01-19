@@ -210,6 +210,7 @@
     <Content Include="src\assets\img\speaker.svg" />
     <Content Include="src\assets\img\symbols_favorite.svg" />
     <Content Include="src\assets\img\translate-fill-secondary.svg" />
+    <Content Include="src\assets\img\translate-fill.svg" />
     <Content Include="src\assets\img\triangle-top-left.svg" />
     <Content Include="src\assets\img\user-linear.svg" />
     <Content Include="src\assets\js\bootstrap.bundle.min.js" />

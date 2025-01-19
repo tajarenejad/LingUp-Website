@@ -5,15 +5,7 @@
       <div class="container">
         <div class="layout">
           <aside class="aside">
-            <div class="chat-box">
-              <div class="chat-card">
-                <div class="card-h">
-                  <h3>Start a role play at airport</h3>
-                </div>
-                <div class="card-b"></div>
-                <div class="card-f"></div>
-              </div>
-            </div>
+           
           </aside>
            <div class="content">
             <div class="breadcrumb-wrapper">
