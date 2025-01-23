@@ -263,72 +263,122 @@ main.fixed-sidebar-layout .aside {
 /* ----------------cards---------------- */
 
 .conversation-topics .cards-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
+
 .conversation-topics h1,
 .conversation-topics h2 {
-  font-family: "Roboto-Bold";
-  color: var(--primary-dark-blue);
-  font-size: 1.875rem;
-  font-weight: 700;
-  line-height: 2.5rem;
-  text-align: center;
-  margin-bottom: 1.5rem;
+    font-family: "Roboto-Bold";
+    color: var(--primary-dark-blue);
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
+
 .cards-wrapper .box {
-  width: 100%;
-  background-color: var(--neutral-light-blue);
-  border-radius: var(--radius-20);
-  padding: 1rem;
-  text-align: center;
-  gap: 1rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-basis: calc(25% - 1rem);
-  cursor: pointer;
-  position: relative;
+    width: 100%;
+    background-color: var(--neutral-light-blue);
+    border-radius: var(--radius-20);
+    padding: 1rem;
+    text-align: center;
+    gap: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: calc(25% - 1rem);
+    cursor: pointer;
+    position: relative;
 }
-.cards-wrapper .box a {
-  display: inline-block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.cards-wrapper .box:hover {
-  background-color: var(--light-gray-blue);
-}
-.cards-wrapper .box img {
-  width: 4rem;
-  height: 4rem;
-}
-.cards-wrapper .box h3 {
-  font-family: "Roboto-Bold";
-  font-size: 1.25rem;
-  line-height: 2rem;
-}
+
+    .cards-wrapper .box a {
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .cards-wrapper .box:hover {
+        background-color: var(--light-gray-blue);
+    }
+
+    .cards-wrapper .box img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .cards-wrapper .box h3 {
+        font-family: "Roboto-Bold";
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
+
 .conversation-topics.other-topics .box {
-  flex-basis: calc(33.33% - 1rem);
+    flex-basis: calc(33.33% - 1rem);
 }
+
+.conversation-topics.sub-topics .box {
+    padding: 2rem 0.75rem;
+    flex-basis: calc(33.33% - 1rem);
+}
+
+.conversation-topics.sub-topics h3,
+.conversation-topics.other-topics h3 {
+    font-size: 1rem;
+}
+
+.conversation-topics.sub-topics .toggle-content {
+    width: 100%;
+    display: none;
+}
+
 .view-all a {
-  margin-top: 1rem;
-  padding: 0.5rem 0;
-  gap: 0.25rem;
-  color: var(--secondary-dark-grey-cyan);
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+    gap: 0.25rem;
+    color: var(--secondary-dark-grey-cyan);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
+
+.view-more-btn {
+    color: var(--secondary-dark-grey-cyan);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px;
+    width: max-content;
+    margin: 1rem auto;
+    transition: transform 0.2s ease;
+}
+
+    .view-more-btn::after {
+        content: url("../img/arrow-down-secondary.svg");
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        transition: transform 0.2s ease;
+    }
+
+    .view-more-btn.expand::after {
+        transform: rotate(180deg);
+    }
 /* --------pagination---------------- */
 .pagination {
   display: flex;

@@ -147,6 +147,66 @@
               </div>
             </div>
 
+            <section class="conversation-topics sub-topics">
+                   <h2>Conversation Topics on <span>Airport</span></h2>
+                   <div class="cards-wrapper">
+                       <div class="box">
+                           <h3>Get the Direction</h3>
+                           <a href="#"></a>
+                       </div>
+                       <div class="box">
+                           <h3>Buying a souvenir</h3>
+                           <a href="#"></a>
+                       </div>
+                       <div class="box">
+                           <h3>Buying a souvenir</h3>
+                           <a href="#"></a>
+                       </div>
+                       <div class="box">
+                           <h3>Get the Direction</h3>
+                           <a href="#"></a>
+                       </div>
+                       <div class="box">
+                           <h3>Buying a souvenir</h3>
+                           <a href="#"></a>
+                       </div>
+                       <div class="box">
+                           <h3>Buying a souvenir</h3>
+                           <a href="#"></a>
+                       </div>
+
+                       <div class="toggle-content">
+                           <div class="cards-wrapper">
+                               <div class="box">
+                                   <h3>Get the Direction</h3>
+                                   <a href="#"></a>
+                               </div>
+                               <div class="box">
+                                   <h3>Buying a souvenir</h3>
+                                   <a href="#"></a>
+                               </div>
+                               <div class="box">
+                                   <h3>Buying a souvenir</h3>
+                                   <a href="#"></a>
+                               </div>
+                               <div class="box">
+                                   <h3>Get the Direction</h3>
+                                   <a href="#"></a>
+                               </div>
+                               <div class="box">
+                                   <h3>Buying a souvenir</h3>
+                                   <a href="#"></a>
+                               </div>
+                               <div class="box">
+                                   <h3>Buying a souvenir</h3>
+                                   <a href="#"></a>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <button class="view-more-btn" id="toggle-view">More</button>
+               </section>
+
             <section class="conversation-topics other-topics">
                    <h1>Other Conversation Topics</h1>
                    <div class="cards-wrapper">
@@ -190,10 +250,27 @@
                        </a>
                    </div>
                </section>
+
           </div>
         </div>
       </div>
     </main>
+
+     <script>
+         $(document).ready(function () {
+             $("#toggle-view").click(function () {
+                 const toggleContent = $(".toggle-content");
+                 const button = $(this);
+                 toggleContent.slideToggle(300, function () {
+                     if (toggleContent.is(":visible")) {
+                         button.text("Less").addClass("expand");
+                     } else {
+                         button.text("More").removeClass("expand");
+                     }
+                 });
+             });
+         });
+     </script>
 
     <script>
         const aside = document.querySelector(".aside");
