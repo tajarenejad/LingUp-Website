@@ -194,6 +194,7 @@
     <Content Include="src\assets\img\circle-green.svg" />
     <Content Include="src\assets\img\clipboard-list-bold.svg" />
     <Content Include="src\assets\img\coffee-white-icon.svg" />
+    <Content Include="src\assets\img\danger-triangle-bold.svg" />
     <Content Include="src\assets\img\dislike-outline-bold.svg" />
     <Content Include="src\assets\img\dislike-outline.svg" />
     <Content Include="src\assets\img\email-sign.svg" />
@@ -208,6 +209,7 @@
     <Content Include="src\assets\img\native-speaker-icon.svg" />
     <Content Include="src\assets\img\round-arrow-right-bold.svg" />
     <Content Include="src\assets\img\speaker.svg" />
+    <Content Include="src\assets\img\stop_24.svg" />
     <Content Include="src\assets\img\symbols_favorite.svg" />
     <Content Include="src\assets\img\translate-fill-secondary.svg" />
     <Content Include="src\assets\img\translate-fill.svg" />

@@ -5,7 +5,123 @@
       <div class="container">
         <div class="layout">
           <aside class="aside">
-           
+            <div class="chat-box">
+              <div class="chat-card">
+                <div class="card-h">
+                  <h3>Start a role play at airport</h3>
+                </div>
+                <div class="card-b">
+                  <div class="user">
+                    <div class="user-message">
+                      <p>
+                        Hmm, I think my favorite part has been when the hero
+                        saved the day. It was so excited!
+                      </p>
+                      <div class="message-details">
+                        <span class="message-time">10:30</span>
+                      </div>
+                    </div>
+                    <div class="message-actions">
+                      <button class="speaker">
+                        <img src="/src/assets/img/speaker.svg" alt="speaker" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="AI">
+                    <div class="AI-message">
+                      <p class="AI-response">
+                        Hello Zahra. What do you want to talk about today?
+                      </p>
+                      <div class="translate-text">
+                        <p>Hallo Zahra. Worüber möchtest du heute sprechen?</p>
+                      </div>
+                      <div class="message-details">
+                        <span class="message-time">10:30</span>
+                        <div class="like-dislike">
+                          <button class="like-btn">
+                            <img
+                              src="/src/assets/img/like-outline-bold.svg"
+                              alt="like"
+                            />
+                          </button>
+                          <button class="dislike-btn">
+                            <img
+                              src="/src/assets/img/dislike-outline-bold.svg"
+                              alt="dislike"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="message-actions">
+                      <button class="translate">
+                        <img
+                          src="/src/assets/img/translate-fill.svg"
+                          alt="translate"
+                        />
+                      </button>
+                      <button class="speaker">
+                        <img src="/src/assets/img/speaker.svg" alt="speaker" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="AI loader">
+                    <div class="loading">
+                      <div class="spinner">
+                        <div class="bounce1"></div>
+                        <div class="bounce2"></div>
+                        <div class="bounce3"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-f">
+                  <div class="action">
+                    <button class="record">
+                      <div class="mic">
+                        <img
+                          src="/src/assets/img/mic-icon.svg"
+                          alt="record-voice"
+                        />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mic-check-message">
+              <img
+                src="/src/assets/img/danger-triangle-bold.svg"
+                alt="check your microphone"
+              />
+              <p>Make sure your microphone is working!</p>
+            </div>
+            <div class="audio-record-wrapper">
+              <div class="audio-wave">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <button class="pause-button">
+                <img src="/src/assets/img/stop_24.svg" alt="pause" />
+              </button>
+            </div>
+            <div class="spinner-wrapper">
+              <div class="bg-spinner">
+                <div class="lds-spinner">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
           </aside>
            <div class="content">
             <div class="breadcrumb-wrapper">
