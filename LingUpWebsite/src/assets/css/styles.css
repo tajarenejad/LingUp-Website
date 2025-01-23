@@ -1092,6 +1092,7 @@ footer {
     border-radius: 200px;
     background: #faf8f5;
     cursor: pointer;
+    display: none;
 }
 
 .pause-button {
@@ -1158,9 +1159,11 @@ footer {
 .spinner-wrapper {
     width: 56px;
     height: 56px;
+    margin: 0 auto;
     border-radius: 80px;
     border: 8px solid#ECEFF1;
     background: #e1e4e5;
+    display: none;
 }
 
 .bg-spinner {
@@ -1274,6 +1277,15 @@ footer {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
+    padding: 1rem;
+    display: none;
+}
+
+.audio-list {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
 }
 
 /* ------------------------------------- */

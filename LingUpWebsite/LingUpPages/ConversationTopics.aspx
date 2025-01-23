@@ -442,4 +442,64 @@
         window.addEventListener("resize", adjustasidePosition);
         document.addEventListener("DOMContentLoaded", adjustasidePosition);
     </script>
+
+     <script>
+         const recordButton = document.querySelector(".record");
+         const micCheckMessage = document.querySelector(".mic-check-message");
+         const audioRecordWrapper = document.querySelector(
+             ".audio-record-wrapper"
+         );
+         const spinnerWrapper = document.querySelector(".spinner-wrapper");
+         const audioWave = document.querySelector(".audio-wave");
+         const audioList = document.querySelector(".audio-list");
+
+         let mediaRecorder;
+         let audioChunks = [];
+
+         recordButton.addEventListener("click", async () => {
+             try {
+                 const stream = await navigator.mediaDevices.getUserMedia({
+                     audio: true,
+                 });
+                 mediaRecorder = new MediaRecorder(stream);
+
+                 mediaRecorder.ondataavailable = (event) => {
+                     audioChunks.push(event.data);
+                 };
+
+                 mediaRecorder.onstop = () => {
+                     const blob = new Blob(audioChunks, { type: "audio/wav" });
+                     const audioURL = URL.createObjectURL(blob);
+
+                     const audioElement = document.createElement("audio");
+                     audioElement.src = audioURL;
+                     audioElement.controls = true;
+
+                     audioRecordWrapper.style.display = "none";
+                     spinnerWrapper.style.display = "flex";
+
+                     setTimeout(() => {
+                         audioList.appendChild(audioElement);
+                         spinnerWrapper.style.display = "none";
+                         recordButton.style.display = "flex";
+                         micCheckMessage.style.display = "none";
+                         audioChunks = [];
+                     }, 3000);
+                 };
+
+                 mediaRecorder.start();
+                 recordButton.style.display = "none";
+                 audioRecordWrapper.style.display = "flex";
+                 micCheckMessage.style.display = "none";
+             } catch (error) {
+                 console.error("Error accessing microphone:", error);
+                 recordButton.style.display = "none";
+                 micCheckMessage.style.display = "flex";
+             }
+         });
+
+         audioRecordWrapper.addEventListener("click", () => {
+             mediaRecorder.stop();
+         });
+     </script>
 </asp:Content>
