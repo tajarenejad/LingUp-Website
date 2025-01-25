@@ -1,7 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LingUpPages/LingUp.Master" AutoEventWireup="true" CodeBehind="ConversationTopics.aspx.cs" Inherits="LingUpWebsite.LingUpPages.ConversationTopics" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LingUpPages/LingUp.Master" AutoEventWireup="true" CodeBehind="ConversationSubTopics.aspx.cs" Inherits="LingUpWebsite.LingUpPages.ConversationSubTopics" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <main class="fixed-sidebar-layout">
+       <main class="fixed-sidebar-layout">
       <div class="container">
         <div class="layout">
           <div class="breadcrumb-wrapper mobile-v">
@@ -11,8 +10,11 @@
                 <li class="breadcrumb-item">
                   <a href="#">Conversation</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">
+                <li class="breadcrumb-item">
                   <a href="#">Conversation Topics</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  <a href="#">Conversation SubTopics</a>
                 </li>
               </ol>
             </nav>
@@ -146,9 +148,12 @@
                   <li class="breadcrumb-item">
                     <a href="#">Conversation</a>
                   </li>
-                  <li class="breadcrumb-item active" aria-current="page">
-                    <a href="#">Conversation Topics</a>
-                  </li>
+                  <li class="breadcrumb-item">
+                  <a href="#">Conversation Topics</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  <a href="#">Conversation SubTopics</a>
+                </li>
                 </ol>
               </nav>
             </div>
@@ -203,7 +208,6 @@
                 <h4 class="title-text">Title 4 Topics for Airport</h4>
                 <div class="subTitle-section" id="subsection4-1">
                   <h6 class="subTitle-text">Sub-title 4-1</h6>
-                  <p class="secondary-text">Sample 1:</p>
                   <div class="description">
                     <p>
                       Say hello to our cutting-edge, AI-driven IELTS Speaking
@@ -221,24 +225,10 @@
                       preparation today – try our innovative IELTS Speaking Part
                       2 Answer Checker now!
                     </p>
-                  </div>
-                  <div class="see-more">
-                    <a href="#">
-                      <span
-                        >See more samples on
-                        <strong>Sub-title 4-1</strong></span
-                      >
-                      <img
-                        class="img-arrow"
-                        src="/src/assets/img/round-arrow-right-bold.svg"
-                        alt="arrow-right-circlebackground"
-                      />
-                    </a>
                   </div>
                 </div>
                 <div class="subTitle-section" id="subsection4-2">
                   <h6 class="subTitle-text">Sub-title 4-2</h6>
-                  <p class="secondary-text">Sample 2:</p>
                   <div class="description">
                     <p>
                       Say hello to our cutting-edge, AI-driven IELTS Speaking
@@ -257,22 +247,69 @@
                       2 Answer Checker now!
                     </p>
                   </div>
-                  <div class="see-more">
-                    <a href="#">
-                      <span
-                        >See more samples on
-                        <strong>Sub-title 4-1</strong></span
-                      >
-                      <img
-                        class="img-arrow"
-                        src="/src/assets/img/round-arrow-right-bold.svg"
-                        alt="arrow-right-circlebackground"
-                      />
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
+
+            <section class="conversation-topics sub-topics">
+              <h2>Conversation Topics on <span>Airport</span></h2>
+              <div class="cards-wrapper">
+                <div class="box">
+                  <h3>Get the Direction</h3>
+                  <a href="#"></a>
+                </div>
+                <div class="box">
+                  <h3>Buying a souvenir</h3>
+                  <a href="#"></a>
+                </div>
+                <div class="box">
+                  <h3>Buying a souvenir</h3>
+                  <a href="#"></a>
+                </div>
+                <div class="box">
+                  <h3>Get the Direction</h3>
+                  <a href="#"></a>
+                </div>
+                <div class="box">
+                  <h3>Buying a souvenir</h3>
+                  <a href="#"></a>
+                </div>
+                <div class="box">
+                  <h3>Buying a souvenir</h3>
+                  <a href="#"></a>
+                </div>
+
+                <div class="toggle-content">
+                  <div class="cards-wrapper">
+                    <div class="box">
+                      <h3>Get the Direction</h3>
+                      <a href="#"></a>
+                    </div>
+                    <div class="box">
+                      <h3>Buying a souvenir</h3>
+                      <a href="#"></a>
+                    </div>
+                    <div class="box">
+                      <h3>Buying a souvenir</h3>
+                      <a href="#"></a>
+                    </div>
+                    <div class="box">
+                      <h3>Get the Direction</h3>
+                      <a href="#"></a>
+                    </div>
+                    <div class="box">
+                      <h3>Buying a souvenir</h3>
+                      <a href="#"></a>
+                    </div>
+                    <div class="box">
+                      <h3>Buying a souvenir</h3>
+                      <a href="#"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="view-more-btn" id="toggle-view">More</button>
+            </section>
 
             <section class="conversation-topics other-topics">
               <h2>Other Conversation Topics</h2>
@@ -654,232 +691,231 @@
       <div class="audio-list"></div>
     </main>
 
-     <script>
-         document.querySelectorAll(".translate").forEach((button) => {
-             button.addEventListener("click", function () {
-                 this.classList.toggle("active");
-             });
-         });
-
-         function setupReactionGroup(container) {
-             const likeButton = container.querySelector(".btn-like");
-             const dislikeButton = container.querySelector(".btn-dislike");
-
-             likeButton.addEventListener("click", () => {
-                 likeButton.classList.toggle("active");
-                 dislikeButton.classList.remove("active");
-             });
-
-             dislikeButton.addEventListener("click", () => {
-                 dislikeButton.classList.toggle("active");
-                 likeButton.classList.remove("active");
-             });
-         }
-
-         document.querySelectorAll(".reaction-group").forEach(setupReactionGroup);
-     </script>
-
+    
     <script>
-        $(document).ready(function () {
-            $("#toggle-view").click(function () {
-                const toggleContent = $(".toggle-content");
-                const button = $(this);
-                toggleContent.slideToggle(300, function () {
-                    if (toggleContent.is(":visible")) {
-                        button.text("Less").addClass("expand");
-                    } else {
-                        button.text("More").removeClass("expand");
-                    }
-                });
-            });
-
-            $(".read-more-btn").on("click", function () {
-                const $paragraph = $(this).siblings("p");
-                const isExpanded = $paragraph.hasClass("expanded");
-                $paragraph.toggleClass("expanded line-clamp-2");
-                $(this)
-                    .toggleClass("expanded")
-                    .text(isExpanded ? "Read More" : "Close");
-            });
+      document.querySelectorAll(".translate").forEach((button) => {
+        button.addEventListener("click", function () {
+          this.classList.toggle("active");
         });
+      });
+
+      function setupReactionGroup(container) {
+        const likeButton = container.querySelector(".btn-like");
+        const dislikeButton = container.querySelector(".btn-dislike");
+
+        likeButton.addEventListener("click", () => {
+          likeButton.classList.toggle("active");
+          dislikeButton.classList.remove("active");
+        });
+
+        dislikeButton.addEventListener("click", () => {
+          dislikeButton.classList.toggle("active");
+          likeButton.classList.remove("active");
+        });
+      }
+
+      document.querySelectorAll(".reaction-group").forEach(setupReactionGroup);
     </script>
 
     <script>
-        $(document).ready(function () {
-            function validateForm() {
-                let isValid = true;
-                $("#commentForm .form-control").each(function () {
-                    const value = $(this).val().trim();
-                    if (!value) {
-                        $(this).addClass("is-invalid");
-                        isValid = false;
-                    } else {
-                        $(this).removeClass("is-invalid");
-                    }
-                });
-
-                $(".post-comment-btn")
-                    .prop("disabled", !isValid)
-                    .toggleClass("disabled", !isValid);
-            }
-
-            $(".form-control").on("input", function () {
-                validateForm();
-            });
-
-            $(".form-control")
-                .on("focus", function () {
-                    $(this).removeClass("is-invalid");
-                    $(this).addClass("border-primary");
-                })
-                .on("blur", function () {
-                    $(this).removeClass("border-primary");
-                });
-
-            $("#commentForm").on("submit", function (e) {
-                e.preventDefault();
-                validateForm();
-                if ($(".form-control.is-invalid").length === 0) {
-                    alert("Form submitted successfully!");
-                }
-            });
-        });
-    </script>
-
-    <script>
-        const recordButton = document.querySelector(".record");
-        const micCheckMessage = document.querySelector(".mic-check-message");
-        const audioRecordWrapper = document.querySelector(
-            ".audio-record-wrapper"
-        );
-        const spinnerWrapper = document.querySelector(".spinner-wrapper");
-        const audioWave = document.querySelector(".audio-wave");
-        const audioList = document.querySelector(".audio-list");
-
-        let mediaRecorder;
-        let audioChunks = [];
-
-        recordButton.addEventListener("click", async () => {
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({
-                    audio: true,
-                });
-                mediaRecorder = new MediaRecorder(stream);
-
-                mediaRecorder.ondataavailable = (event) => {
-                    audioChunks.push(event.data);
-                };
-
-                mediaRecorder.onstop = () => {
-                    const blob = new Blob(audioChunks, { type: "audio/wav" });
-                    const audioURL = URL.createObjectURL(blob);
-
-                    const audioElement = document.createElement("audio");
-                    audioElement.src = audioURL;
-                    audioElement.controls = true;
-
-                    audioRecordWrapper.style.display = "none";
-                    spinnerWrapper.style.display = "flex";
-
-                    setTimeout(() => {
-                        audioList.appendChild(audioElement);
-                        spinnerWrapper.style.display = "none";
-                        recordButton.style.display = "flex";
-                        micCheckMessage.style.display = "none";
-                        audioChunks = [];
-                    }, 3000);
-                };
-
-                mediaRecorder.start();
-                recordButton.style.display = "none";
-                audioRecordWrapper.style.display = "flex";
-                micCheckMessage.style.display = "none";
-            } catch (error) {
-                console.error("Error accessing microphone:", error);
-                recordButton.style.display = "none";
-                micCheckMessage.style.display = "flex";
-            }
-        });
-
-        audioRecordWrapper.addEventListener("click", () => {
-            mediaRecorder.stop();
-        });
-    </script>
-
-    <script>
-        const aside = document.querySelector(".aside");
-        const container = document.querySelector("main .container");
-        const header = document.querySelector(".navbar");
-
-        function adjustasidePosition() {
-            if (!aside || !container || !header) return;
-
-            const headerHeight = header.offsetHeight;
-            const containerRect = container.getBoundingClientRect();
-            const asideHeight = aside.offsetHeight;
-            const windowHeight = window.innerHeight;
-
-            const containerStyles = window.getComputedStyle(container);
-            const containerPaddingRight = parseFloat(containerStyles.paddingRight);
-
-            const containerRight =
-                window.innerWidth - containerRect.right - containerPaddingRight;
-            if (
-                containerRect.top <= headerHeight &&
-                containerRect.bottom >= windowHeight
-            ) {
-                aside.style.position = "fixed";
-                aside.style.top = `${headerHeight}px`;
-                aside.style.removeProperty("bottom");
-                aside.style.right = `${containerRight}px`;
-                aside.style.removeProperty("left");
-            } else if (containerRect.bottom <= windowHeight) {
-                aside.style.position = "absolute";
-                aside.style.top = `${container.offsetHeight - asideHeight}px`;
-                aside.style.removeProperty("bottom");
-                aside.style.right = "0";
-                aside.style.removeProperty("left");
-            } else if (containerRect.top > headerHeight) {
-                aside.style.position = "fixed";
-                aside.style.top = `${headerHeight}px`;
-                aside.style.removeProperty("bottom");
-                aside.style.right = `${containerRight}px`;
-                aside.style.removeProperty("left");
+      $(document).ready(function () {
+        $("#toggle-view").click(function () {
+          const toggleContent = $(".toggle-content");
+          const button = $(this);
+          toggleContent.slideToggle(300, function () {
+            if (toggleContent.is(":visible")) {
+              button.text("Less").addClass("expand");
             } else {
-                aside.style.position = "static";
-                aside.style.removeProperty("top");
-                aside.style.removeProperty("bottom");
-                aside.style.removeProperty("right");
-                aside.style.removeProperty("left");
+              button.text("More").removeClass("expand");
             }
+          });
+        });
+
+        $(".read-more-btn").on("click", function () {
+          const $paragraph = $(this).siblings("p");
+          const isExpanded = $paragraph.hasClass("expanded");
+          $paragraph.toggleClass("expanded line-clamp-2");
+          $(this)
+            .toggleClass("expanded")
+            .text(isExpanded ? "Read More" : "Close");
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        function validateForm() {
+          let isValid = true;
+          $("#commentForm .form-control").each(function () {
+            const value = $(this).val().trim();
+            if (!value) {
+              $(this).addClass("is-invalid");
+              isValid = false;
+            } else {
+              $(this).removeClass("is-invalid");
+            }
+          });
+
+          $(".post-comment-btn")
+            .prop("disabled", !isValid)
+            .toggleClass("disabled", !isValid);
         }
 
-        const mediaQuery = window.matchMedia("(min-width: 992px)");
+        $(".form-control").on("input", function () {
+          validateForm();
+        });
 
-        function handleMediaQueryChange(e) {
-            if (e.matches) {
-                window.addEventListener("scroll", adjustasidePosition);
-                window.addEventListener("resize", adjustasidePosition);
-                document.addEventListener("DOMContentLoaded", adjustasidePosition);
-            } else {
-                window.removeEventListener("scroll", adjustasidePosition);
-                window.removeEventListener("resize", adjustasidePosition);
-                document.removeEventListener("DOMContentLoaded", adjustasidePosition);
+        $(".form-control")
+          .on("focus", function () {
+            $(this).removeClass("is-invalid");
+            $(this).addClass("border-primary");
+          })
+          .on("blur", function () {
+            $(this).removeClass("border-primary");
+          });
 
-                if (aside) {
-                    aside.style.position = "static";
-                    aside.style.removeProperty("top");
-                    aside.style.removeProperty("bottom");
-                    aside.style.removeProperty("right");
-                    aside.style.removeProperty("left");
-                }
-            }
-        }
-
-        handleMediaQueryChange(mediaQuery);
-
-        mediaQuery.addEventListener("change", handleMediaQueryChange);
+        $("#commentForm").on("submit", function (e) {
+          e.preventDefault();
+          validateForm();
+          if ($(".form-control.is-invalid").length === 0) {
+            alert("Form submitted successfully!");
+          }
+        });
+      });
     </script>
 
+    <script>
+      const recordButton = document.querySelector(".record");
+      const micCheckMessage = document.querySelector(".mic-check-message");
+      const audioRecordWrapper = document.querySelector(
+        ".audio-record-wrapper"
+      );
+      const spinnerWrapper = document.querySelector(".spinner-wrapper");
+      const audioWave = document.querySelector(".audio-wave");
+      const audioList = document.querySelector(".audio-list");
 
+      let mediaRecorder;
+      let audioChunks = [];
+
+      recordButton.addEventListener("click", async () => {
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({
+            audio: true,
+          });
+          mediaRecorder = new MediaRecorder(stream);
+
+          mediaRecorder.ondataavailable = (event) => {
+            audioChunks.push(event.data);
+          };
+
+          mediaRecorder.onstop = () => {
+            const blob = new Blob(audioChunks, { type: "audio/wav" });
+            const audioURL = URL.createObjectURL(blob);
+
+            const audioElement = document.createElement("audio");
+            audioElement.src = audioURL;
+            audioElement.controls = true;
+
+            audioRecordWrapper.style.display = "none";
+            spinnerWrapper.style.display = "flex";
+
+            setTimeout(() => {
+              audioList.appendChild(audioElement);
+              spinnerWrapper.style.display = "none";
+              recordButton.style.display = "flex";
+              micCheckMessage.style.display = "none";
+              audioChunks = [];
+            }, 3000);
+          };
+
+          mediaRecorder.start();
+          recordButton.style.display = "none";
+          audioRecordWrapper.style.display = "flex";
+          micCheckMessage.style.display = "none";
+        } catch (error) {
+          console.error("Error accessing microphone:", error);
+          recordButton.style.display = "none";
+          micCheckMessage.style.display = "flex";
+        }
+      });
+
+      audioRecordWrapper.addEventListener("click", () => {
+        mediaRecorder.stop();
+      });
+    </script>
+
+    <script>
+      const aside = document.querySelector(".aside");
+      const container = document.querySelector("main .container");
+      const header = document.querySelector(".navbar");
+
+      function adjustasidePosition() {
+        if (!aside || !container || !header) return;
+
+        const headerHeight = header.offsetHeight;
+        const containerRect = container.getBoundingClientRect();
+        const asideHeight = aside.offsetHeight;
+        const windowHeight = window.innerHeight;
+
+        const containerStyles = window.getComputedStyle(container);
+        const containerPaddingRight = parseFloat(containerStyles.paddingRight);
+
+        const containerRight =
+          window.innerWidth - containerRect.right - containerPaddingRight;
+        if (
+          containerRect.top <= headerHeight &&
+          containerRect.bottom >= windowHeight
+        ) {
+          aside.style.position = "fixed";
+          aside.style.top = `${headerHeight}px`;
+          aside.style.removeProperty("bottom");
+          aside.style.right = `${containerRight}px`;
+          aside.style.removeProperty("left");
+        } else if (containerRect.bottom <= windowHeight) {
+          aside.style.position = "absolute";
+          aside.style.top = `${container.offsetHeight - asideHeight}px`;
+          aside.style.removeProperty("bottom");
+          aside.style.right = "0";
+          aside.style.removeProperty("left");
+        } else if (containerRect.top > headerHeight) {
+          aside.style.position = "fixed";
+          aside.style.top = `${headerHeight}px`;
+          aside.style.removeProperty("bottom");
+          aside.style.right = `${containerRight}px`;
+          aside.style.removeProperty("left");
+        } else {
+          aside.style.position = "static";
+          aside.style.removeProperty("top");
+          aside.style.removeProperty("bottom");
+          aside.style.removeProperty("right");
+          aside.style.removeProperty("left");
+        }
+      }
+
+      const mediaQuery = window.matchMedia("(min-width: 992px)");
+
+      function handleMediaQueryChange(e) {
+        if (e.matches) {
+          window.addEventListener("scroll", adjustasidePosition);
+          window.addEventListener("resize", adjustasidePosition);
+          document.addEventListener("DOMContentLoaded", adjustasidePosition);
+        } else {
+          window.removeEventListener("scroll", adjustasidePosition);
+          window.removeEventListener("resize", adjustasidePosition);
+          document.removeEventListener("DOMContentLoaded", adjustasidePosition);
+
+          if (aside) {
+            aside.style.position = "static";
+            aside.style.removeProperty("top");
+            aside.style.removeProperty("bottom");
+            aside.style.removeProperty("right");
+            aside.style.removeProperty("left");
+          }
+        }
+      }
+
+      handleMediaQueryChange(mediaQuery);
+
+      mediaQuery.addEventListener("change", handleMediaQueryChange);
+    </script>
 </asp:Content>
