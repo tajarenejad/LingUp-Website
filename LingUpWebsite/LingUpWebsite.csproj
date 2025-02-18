@@ -124,6 +124,9 @@
     <Content Include="LingUpPages\Conversations.aspx" />
     <Content Include="LingUpPages\ConversationSubTopics.aspx" />
     <Content Include="LingUpPages\ConversationTopics.aspx" />
+    <Content Include="LingUpPages\RolePlay.aspx" />
+    <Content Include="LingUpPages\RolePlayTopic.aspx" />
+    <Content Include="LingUpPages\RolePlayTopicDetail.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -278,6 +281,27 @@
     </Compile>
     <Compile Include="LingUpPages\LingUp.Master.designer.cs">
       <DependentUpon>LingUp.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LingUpPages\RolePlay.aspx.cs">
+      <DependentUpon>RolePlay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LingUpPages\RolePlay.aspx.designer.cs">
+      <DependentUpon>RolePlay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LingUpPages\RolePlayTopic.aspx.cs">
+      <DependentUpon>RolePlayTopic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LingUpPages\RolePlayTopic.aspx.designer.cs">
+      <DependentUpon>RolePlayTopic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LingUpPages\RolePlayTopicDetail.aspx.cs">
+      <DependentUpon>RolePlayTopicDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LingUpPages\RolePlayTopicDetail.aspx.designer.cs">
+      <DependentUpon>RolePlayTopicDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

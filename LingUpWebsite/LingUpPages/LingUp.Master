@@ -21,87 +21,120 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-     <header>
-      <nav class="navbar">
-        <div class="container">
-          <div class="nav-content">
-            <div class="logo">
-              <a class="navbar-brand" href="https://lingup.ai">
-                <img src="/src/assets/img/LingUpLogo.svg" alt="LingUp Logo" />
-              </a>
-            </div>
-            <div class="navbar-actions">
-               <a href="#" class="link">Get started</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-    </asp:ContentPlaceHolder>
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-7 col-lg-4">
-                    <h5 class="footer-title">Company</h5>
-                    <ul class="footer-list">
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Terms and Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-5 col-lg-4">
-                    <h5 class="footer-title">Information</h5>
-                    <ul class="footer-list">
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Support</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <div class="subscribe-section">
-                        <h4 class="subscribe-title">Subscribe</h4>
-                        <div class="input-group mb-3">
-                            <input
-                                type="email"
-                                class="form-control"
-                                placeholder="Email address"
-                                aria-label="Email address" />
-                            <button
-                                class="btn btn-outline-secondary"
-                                type="button"
-                                id="button-addon"
-                                aria-label="Subscribe">
-                                <img
-                                    src="/src/assets/img/arrows-right-white-icon.svg"
-                                    alt="subscribe" />
-                            </button>
-                        </div>
-                        <p class="description">
-                            Hello, we are Lift Media. Our goal is to translate the positive
-                effects of revolutionizing how companies engage with their
-                clients and their team.
-                        </p>
+    <header class="header">
+        <nav class="header__navbar">
+            <div class="header__container">
+                <div class="header__content">
+                    <div class="header__logo">
+                        <a class="header__logo-link" href="https://lingup.ai">
+                            <img
+                                class="header__logo-img"
+                                src="./assets/img/LingUpLogo.svg"
+                                alt="LingUp Logo" />
+                        </a>
+                    </div>
+                    <div class="header__actions">
+                        <a href="#" class="header__button">Get started</a>
                     </div>
                 </div>
             </div>
-            <div class="footer-divider"></div>
-            <div class="footer-bottom">
-                <span>Made with</span>
-                <span>
-                    <img src="/src/assets/img/coffee-white-icon.svg" alt="coffee" />
-                </span>
-                <span>and</span>
-                <span>
-                    <img src="/src/assets/img/symbols_favorite.svg" alt="like" />
-                </span>
-                <span>in</span>
-                <span>
-                    <img src="/src/assets/img/canada-flag.svg" alt="Canada" />
-                </span>
+        </nav>
+    </header>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+      <!-- -----------footer---------------- -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__row">
+          <div class="footer__column footer__column--company">
+            <h5 class="footer__title">Company</h5>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">Contact Us</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Terms and Conditions</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__column footer__column--info">
+            <h5 class="footer__title">Information</h5>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">FAQ</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Blog</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Support</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__column footer__column--subscribe">
+            <div class="footer__subscribe">
+              <h4 class="footer__subscribe-title">Subscribe</h4>
+              <div class="footer__input-group">
+                <input
+                  type="email"
+                  class="footer__input"
+                  placeholder="Email address"
+                  aria-label="Email address"
+                />
+                <button
+                  class="footer__button"
+                  type="button"
+                  id="button-addon"
+                  aria-label="Subscribe"
+                >
+                  <img
+                    class="footer__button-icon"
+                    src="./assets/img/arrows-right-white-icon.svg"
+                    alt="Subscribe"
+                  />
+                </button>
+              </div>
+              <p class="footer__description">
+                Hello, we are Lift Media. Our goal is to translate the positive
+                effects of revolutionizing how companies engage with their
+                clients and their team.
+              </p>
             </div>
+          </div>
         </div>
+        <div class="footer__divider"></div>
+        <div class="footer__bottom">
+          <span>Made with</span>
+          <span>
+            <img
+              class="footer__icon"
+              src="./assets/img/coffee-white-icon.svg"
+              alt="coffee"
+            />
+          </span>
+          <span>and</span>
+          <span>
+            <img
+              class="footer__icon"
+              src="./assets/img/symbols_favorite.svg"
+              alt="like"
+            />
+          </span>
+          <span>in</span>
+          <span>
+            <img
+              class="footer__icon"
+              src="./assets/img/canada-flag.svg"
+              alt="Canada"
+            />
+          </span>
+        </div>
+      </div>
     </footer>
 </body>
 </html>
