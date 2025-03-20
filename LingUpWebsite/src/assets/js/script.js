@@ -1,108 +1,130 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const swiper = new Swiper(".slide-content", {
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        grabCursor: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        spaceBetween: 24,
-        breakpoints: {
-            768: { slidesPerView: 1 },
-            992: { slidesPerView: 2 },
-            1128: { slidesPerView: 3 },
-        },
-    });
-    const bgColorArray = ["#F9A825", "#16A085", "#01A6FF", "#FF6B6B"];
-    const slides = document.querySelectorAll(".roleplay__slide.swiper-slide");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const swiper = new Swiper(".slide-content", {
+//     loop: true,
+//     autoplay: {
+//       delay: 5000,
+//       disableOnInteraction: false,
+//     },
+//     grabCursor: true,
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+//     spaceBetween: 24,
+//     breakpoints: {
+//       768: { slidesPerView: 1 },
+//       992: { slidesPerView: 2 },
+//       1128: { slidesPerView: 3 },
+//     },
+//   });
+//   const bgColorArray = ["#F9A825", "#16A085", "#01A6FF", "#FF6B6B"];
+//   const slides = document.querySelectorAll(".roleplay__slide.swiper-slide");
 
-    slides.forEach((slide, index) => {
-        const colorIndex = index % bgColorArray.length;
-        slide.style.backgroundColor = bgColorArray[colorIndex];
+//   slides.forEach((slide, index) => {
+//     const colorIndex = index % bgColorArray.length;
+//     slide.style.backgroundColor = bgColorArray[colorIndex];
+//   });
+// });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var breadcrumbContainer = document.querySelector(".breadcrumb__container");
+  var lastLink = document.querySelector(
+    ".breadcrumb__list .breadcrumb__item:last-child .breadcrumb__link"
+  );
+
+  if (breadcrumbContainer && lastLink) {
+    lastLink.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "end",
     });
+    window.scrollBy(0, -50);
+  }
 });
 
+
+
+
 function initializeSidebarFix() {
-    const aside = document.querySelector(".layout__sidebar");
-    const container = document.querySelector(".layout__container");
-    const header = document.querySelector(".header__navbar");
+  const aside = document.querySelector(".layout--has-sidebar .layout__sidebar");
+  const container = document.querySelector(
+    ".layout--has-sidebar .layout__container"
+  );
+  const header = document.querySelector(".header__navbar");
 
-    function adjustasidePosition() {
-        if (!aside || !container || !header) return;
+  function adjustasidePosition() {
+    if (!aside || !container || !header) return;
 
-        const headerHeight = header.offsetHeight;
-        const containerRect = container.getBoundingClientRect();
-        const asideHeight = aside.offsetHeight;
-        const windowHeight = window.innerHeight;
+    const headerHeight = header.offsetHeight;
+    const containerRect = container.getBoundingClientRect();
+    const asideHeight = aside.offsetHeight;
+    const windowHeight = window.innerHeight;
 
-        const containerStyles = window.getComputedStyle(container);
-        const containerPaddingRight = parseFloat(containerStyles.paddingRight);
+    const containerStyles = window.getComputedStyle(container);
+    const containerPaddingRight = parseFloat(containerStyles.paddingRight);
 
-        const containerRight =
-            window.innerWidth - containerRect.right - containerPaddingRight;
+    const containerRight =
+      window.innerWidth - containerRect.right - containerPaddingRight;
 
-        if (
-            containerRect.top <= headerHeight &&
-            containerRect.bottom >= windowHeight
-        ) {
-            aside.style.position = "fixed";
-            aside.style.top = `${headerHeight}px`;
-            aside.style.removeProperty("bottom");
-            aside.style.right = `${containerRight}px`;
-            aside.style.removeProperty("left");
-        } else if (containerRect.bottom <= windowHeight) {
-            aside.style.position = "absolute";
-            aside.style.top = `${container.offsetHeight - asideHeight}px`;
-            aside.style.removeProperty("bottom");
-            aside.style.right = "0";
-            aside.style.removeProperty("left");
-        } else if (containerRect.top > headerHeight) {
-            aside.style.position = "fixed";
-            aside.style.top = `${headerHeight}px`;
-            aside.style.removeProperty("bottom");
-            aside.style.right = `${containerRight}px`;
-            aside.style.removeProperty("left");
-        } else {
-            aside.style.position = "static";
-            aside.style.removeProperty("top");
-            aside.style.removeProperty("bottom");
-            aside.style.removeProperty("right");
-            aside.style.removeProperty("left");
-        }
+    if (
+      containerRect.top <= headerHeight &&
+      containerRect.bottom >= windowHeight
+    ) {
+      aside.style.position = "fixed";
+      aside.style.top = `${headerHeight}px`;
+      aside.style.removeProperty("bottom");
+      aside.style.right = `${containerRight}px`;
+      aside.style.removeProperty("left");
+    } else if (containerRect.bottom <= windowHeight) {
+      aside.style.position = "absolute";
+      aside.style.top = `${container.offsetHeight - asideHeight}px`;
+      aside.style.removeProperty("bottom");
+      aside.style.right = "0";
+      aside.style.removeProperty("left");
+    } else if (containerRect.top > headerHeight) {
+      aside.style.position = "fixed";
+      aside.style.top = `${headerHeight}px`;
+      aside.style.removeProperty("bottom");
+      aside.style.right = `${containerRight}px`;
+      aside.style.removeProperty("left");
+    } else {
+      aside.style.position = "static";
+      aside.style.removeProperty("top");
+      aside.style.removeProperty("bottom");
+      aside.style.removeProperty("right");
+      aside.style.removeProperty("left");
     }
+  }
 
-    const mediaQuery = window.matchMedia("(min-width: 992px)");
+  const mediaQuery = window.matchMedia("(min-width: 992px)");
 
-    function handleMediaQueryChange(e) {
-        if (e.matches) {
-            window.addEventListener("scroll", adjustasidePosition);
-            window.addEventListener("resize", adjustasidePosition);
-            document.addEventListener("DOMContentLoaded", adjustasidePosition);
-        } else {
-            window.removeEventListener("scroll", adjustasidePosition);
-            window.removeEventListener("resize", adjustasidePosition);
-            document.removeEventListener("DOMContentLoaded", adjustasidePosition);
+  function handleMediaQueryChange(e) {
+    if (e.matches) {
+      window.addEventListener("scroll", adjustasidePosition);
+      window.addEventListener("resize", adjustasidePosition);
+      document.addEventListener("DOMContentLoaded", adjustasidePosition);
+    } else {
+      window.removeEventListener("scroll", adjustasidePosition);
+      window.removeEventListener("resize", adjustasidePosition);
+      document.removeEventListener("DOMContentLoaded", adjustasidePosition);
 
-            if (aside) {
-                aside.style.position = "static";
-                aside.style.removeProperty("top");
-                aside.style.removeProperty("bottom");
-                aside.style.removeProperty("right");
-                aside.style.removeProperty("left");
-            }
-        }
+      if (aside) {
+        aside.style.position = "static";
+        aside.style.removeProperty("top");
+        aside.style.removeProperty("bottom");
+        aside.style.removeProperty("right");
+        aside.style.removeProperty("left");
+      }
     }
+  }
 
-    handleMediaQueryChange(mediaQuery);
+  handleMediaQueryChange(mediaQuery);
 
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
+  mediaQuery.addEventListener("change", handleMediaQueryChange);
 }
-if (document.querySelector(".layout__sidebar")) {
-    initializeSidebarFix();
+if (document.querySelector(".layout--has-sidebar .layout__sidebar")) {
+  initializeSidebarFix();
 }
 
 // ===========================================
@@ -110,16 +132,16 @@ if (document.querySelector(".layout__sidebar")) {
 // --------------------------------------
 
 function setEqualWidths() {
-    const participants = document.querySelectorAll(".conversation__participant");
-    let maxWidth = 0;
+  const participants = document.querySelectorAll(".conversation__participant");
+  let maxWidth = 0;
 
-    participants.forEach((participant) => {
-        maxWidth = Math.max(maxWidth, participant.offsetWidth);
-    });
+  participants.forEach((participant) => {
+    maxWidth = Math.max(maxWidth, participant.offsetWidth);
+  });
 
-    participants.forEach((participant) => {
-        participant.style.width = maxWidth + "px";
-    });
+  participants.forEach((participant) => {
+    participant.style.width = maxWidth + "px";
+  });
 }
 
 window.addEventListener("load", setEqualWidths);

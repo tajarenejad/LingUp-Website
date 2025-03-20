@@ -21,24 +21,32 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <header class="header">
-        <nav class="header__navbar">
-            <div class="header__container">
-                <div class="header__content">
-                    <div class="header__logo">
-                        <a class="header__logo-link" href="https://lingup.ai">
-                            <img
-                                class="header__logo-img"
-                                src="/src/assets/img/LingUpLogo.svg"
-                                alt="LingUp Logo" />
-                        </a>
-                    </div>
-                    <div class="header__actions">
-                        <a href="#" class="header__button">Get started</a>
-                    </div>
-                </div>
+ <header class="header">
+      <nav class="header__navbar">
+        <div class="header__container">
+          <div class="header__content">
+            <div class="header__logo">
+              <a class="header__logo-link" href="https://lingup.ai">
+                <img
+                  class="header__logo-img"
+                  src="/src/assets/img/LingUpLogo.svg"
+                  alt="LingUp Logo"
+                />
+              </a>
             </div>
-        </nav>
+            <div class="header__actions">
+              <button
+                type="button"
+                class="header__button"
+                data-bs-target="#download-app-modal"
+                data-bs-toggle="modal"
+              >
+                Get started
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
