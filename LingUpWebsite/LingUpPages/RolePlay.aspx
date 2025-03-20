@@ -29,9 +29,22 @@
                   <h1 class="banner__title">
                     Master English with Roleplays for Real-Life Situations
                   </h1>
-                  <button class="banner__link">Get started for free</button>
+                  <div class="banner__image banner__image--mobile">
+                    <img
+                      src="/src/assets/img/lingup-banner.png"
+                      alt="App preview"
+                    />
+                  </div>
+                  <button
+                    type="button"
+                    class="banner__link"
+                    data-bs-target="#download-app-modal"
+                    data-bs-toggle="modal"
+                  >
+                    Get started for free
+                  </button>
                 </div>
-                <div class="banner__image">
+                <div class="banner__image .banner__image--desktop">
                   <img src="/src/assets/img/lingup-banner.png" alt="App preview" />
                 </div>
               </div>
@@ -142,11 +155,26 @@
                           Choose from situations like restaurants, airports, or
                           shopping.
                         </p>
-                        <a href="#" class="how-it-works__link">
+                        <div
+                          class="how-it-works__image how-it-works__image--mobile"
+                        >
+                          <img
+                            src="/src/assets/img/Scenario-screenshot.png"
+                            alt="Roleplay Scenario"
+                          />
+                        </div>
+                        <button
+                          type="button"
+                          class="how-it-works__link"
+                          data-bs-target="#download-app-modal"
+                          data-bs-toggle="modal"
+                        >
                           Get started for free
-                        </a>
+                        </button>
                       </div>
-                      <div class="how-it-works__image">
+                      <div
+                        class="how-it-works__image how-it-works__image--desktop"
+                      >
                         <img
                           src="/src/assets/img/Scenario-screenshot.png"
                           alt="Roleplay Scenario"
@@ -156,29 +184,82 @@
                   </div>
 
                   <div class="tab-pane fade" id="talk" role="tabpanel">
-                    <div class="how-it-works__text">
-                      <h3 class="how-it-works__heading">
-                        Engage in Conversations
-                      </h3>
-                      <p class="how-it-works__description">
-                        Practice by speaking and getting AI feedback.
-                      </p>
+                    <div class="how-it-works__wrapper">
+                      <div class="how-it-works__text">
+                        <h3 class="how-it-works__heading">Start Talking</h3>
+                        <p class="how-it-works__description">
+                          Speak naturally while LingUp’s AI interacts with you.
+                        </p>
+                        <div
+                          class="how-it-works__image how-it-works__image--mobile"
+                        >
+                          <img
+                            src="/src/assets/img/Scenario-screenshot.png"
+                            alt="Roleplay Scenario"
+                          />
+                        </div>
+                        <button
+                          type="button"
+                          class="how-it-works__link"
+                          data-bs-target="#download-app-modal"
+                          data-bs-toggle="modal"
+                        >
+                          Get started for free
+                        </button>
+                      </div>
+                      <div
+                        class="how-it-works__image how-it-works__image--desktop"
+                      >
+                        <img
+                          src="/src/assets/img/Scenario-screenshot.png"
+                          alt="Roleplay Scenario"
+                        />
+                      </div>
                     </div>
                   </div>
 
                   <div class="tab-pane fade" id="progress" role="tabpanel">
-                    <div class="how-it-works__text">
-                      <h3 class="how-it-works__heading">Track Your Progress</h3>
-                      <p class="how-it-works__description">
-                        Monitor how well you are improving over time.
-                      </p>
+                    <div class="how-it-works__wrapper">
+                      <div class="how-it-works__text">
+                        <h3 class="how-it-works__heading">
+                          Get Better Every Day
+                        </h3>
+                        <p class="how-it-works__description">
+                          Receive instant tips on pronunciation, grammar, and
+                          fluency.
+                        </p>
+                        <div
+                          class="how-it-works__image how-it-works__image--mobile"
+                        >
+                          <img
+                            src="/src/assets/img/Scenario-screenshot.png"
+                            alt="Roleplay Scenario"
+                          />
+                        </div>
+                        <button
+                          type="button"
+                          class="how-it-works__link"
+                          data-bs-target="#download-app-modal"
+                          data-bs-toggle="modal"
+                        >
+                          Get started for free
+                        </button>
+                      </div>
+                      <div
+                        class="how-it-works__image how-it-works__image--desktop"
+                      >
+                        <img
+                          src="/src/assets/img/Scenario-screenshot.png"
+                          alt="Roleplay Scenario"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
-            <section class="roleplay">
-              <div class="section__container">
+            <section class="roleplay roleplay--desktop">
+              <div class="roleplay__container section__container">
                 <h2 class="roleplay__title">
                   Explore Roleplays on the Website
                 </h2>
@@ -188,99 +269,554 @@
                   vocabulary, and example dialogues to help you build
                   confidence.
                 </p>
-                <div class="slide-container swiper">
-                  <div class="slide-content">
-                    <div class="roleplay_wrapper swiper-wrapper">
-                      <div class="roleplay__slide swiper-slide">
-                        <h3 class="roleplay__card-title">Restaurant</h3>
-                        <ul class="roleplay__list">
-                          <li class="roleplay__item">Ordering Food</li>
-                          <li class="roleplay__item">Making a Reservation</li>
-                          <li class="roleplay__item">Handling Complaints</li>
-                          <li class="roleplay__item">Asking about the Menu</li>
-                        </ul>
-                        <img
-                          src="/src/assets/img/restaurant-vector.png"
-                          alt="Restaurant Scene"
-                          class="roleplay__image"
-                        />
-                      </div>
-                      <div class="roleplay__slide swiper-slide">
-                        <h3 class="roleplay__card-title">Family</h3>
-                        <ul class="roleplay__list">
-                          <li class="roleplay__item">Ordering Food</li>
-                          <li class="roleplay__item">Making a Reservation</li>
-                          <li class="roleplay__item">Handling Complaints</li>
-                          <li class="roleplay__item">Asking about the Menu</li>
-                        </ul>
-                        <img
-                          src="/src/assets/img/vector-family.svg"
-                          alt="Family Scene"
-                          class="roleplay__image"
-                        />
-                      </div>
-                      <div class="roleplay__slide swiper-slide">
-                        <h3 class="roleplay__card-title">Airport</h3>
-                        <ul class="roleplay__list">
-                          <li class="roleplay__item">Ordering Food</li>
-                          <li class="roleplay__item">Making a Reservation</li>
-                          <li class="roleplay__item">Handling Complaints</li>
-                          <li class="roleplay__item">Asking about the Menu</li>
-                        </ul>
-                        <img
-                          src="/src/assets/img/vector-Airport.svg"
-                          alt="Airport Scene"
-                          class="roleplay__image"
-                        />
-                      </div>
-                      <div class="roleplay__slide swiper-slide">
-                        <h3 class="roleplay__card-title">Restaurant</h3>
-                        <ul class="roleplay__list">
-                          <li class="roleplay__item">Ordering Food</li>
-                          <li class="roleplay__item">Making a Reservation</li>
-                          <li class="roleplay__item">Handling Complaints</li>
-                          <li class="roleplay__item">Asking about the Menu</li>
-                        </ul>
-                        <img
-                          src="/src/assets/img/restaurant-vector.png"
-                          alt="Restaurant Scene"
-                          class="roleplay__image"
-                        />
-                      </div>
-                      <div class="roleplay__slide swiper-slide">
-                        <h3 class="roleplay__card-title">Family</h3>
-                        <ul class="roleplay__list">
-                          <li class="roleplay__item">Ordering Food</li>
-                          <li class="roleplay__item">Making a Reservation</li>
-                          <li class="roleplay__item">Handling Complaints</li>
-                          <li class="roleplay__item">Asking about the Menu</li>
-                        </ul>
-                        <img
-                          src="/src/assets/img/vector-family.svg"
-                          alt="Family Scene"
-                          class="roleplay__image"
-                        />
-                      </div>
-                      <div class="roleplay__slide swiper-slide">
-                        <h3 class="roleplay__card-title">Airport</h3>
-                        <ul class="roleplay__list">
-                          <li class="roleplay__item">Ordering Food</li>
-                          <li class="roleplay__item">Making a Reservation</li>
-                          <li class="roleplay__item">Handling Complaints</li>
-                          <li class="roleplay__item">Asking about the Menu</li>
-                        </ul>
-                        <img
-                          src="/src/assets/img/vector-Airport.svg"
-                          alt="Airport Scene"
-                          class="roleplay__image"
-                        />
-                      </div>
+                <div class="cards-container">
+                  <div class="roleplay__card">
+                    <div class="roleplay__card-links">
+                      <a href="#" class="roleplay__card-title text-truncate"
+                        >Restaurant</a
+                      >
+                      <ul class="roleplay__list">
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate">Ordering Food</a>
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Making a Reservation</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Handling Complaints</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Asking about the Menu</a
+                          >
+                        </li>
+                      </ul>
                     </div>
+                    <img
+                      src="/src/assets/img/restaurant-vector.png"
+                      alt="Restaurant Scene"
+                      class="roleplay__image"
+                    />
                   </div>
+                  <div class="roleplay__card">
+                    <div class="roleplay__card-links">
+                      <a href="#" class="roleplay__card-title text-truncate"
+                        >Family</a
+                      >
+                      <ul class="roleplay__list">
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate">Ordering Food</a>
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Making a Reservation</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Handling Complaints</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Asking about the Menu</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
 
-                  <div class="swiper-button-next roleplay__button"></div>
-                  <div class="swiper-button-prev roleplay__button"></div>
+                    <img
+                      src="/src/assets/img/vector-family.svg"
+                      alt="Family Scene"
+                      class="roleplay__image"
+                    />
+                  </div>
+                  <div class="roleplay__card">
+                    <div class="roleplay__card-links">
+                      <a href="#" class="roleplay__card-title text-truncate"
+                        >Airport</a
+                      >
+                      <ul class="roleplay__list">
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate">Ordering Food</a>
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Making a Reservation</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Handling Complaints</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Asking about the Menu</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <img
+                      src="/src/assets/img/vector-Airport.svg"
+                      alt="Airport Scene"
+                      class="roleplay__image"
+                    />
+                  </div>
+                  <div class="roleplay__card">
+                    <div class="roleplay__card-links">
+                      <a href="#" class="roleplay__card-title text-truncate"
+                        >Family</a
+                      >
+                      <ul class="roleplay__list">
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate">Ordering Food</a>
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Making a Reservation</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Handling Complaints</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Asking about the Menu</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <img
+                      src="/src/assets/img/vector-family.svg"
+                      alt="Family Scene"
+                      class="roleplay__image"
+                    />
+                  </div>
+                  <div class="roleplay__card">
+                    <div class="roleplay__card-links">
+                      <a href="#" class="roleplay__card-title text-truncate"
+                        >Restaurant</a
+                      >
+                      <ul class="roleplay__list">
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate">Ordering Food</a>
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Making a Reservation</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Handling Complaints</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Asking about the Menu</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <img
+                      src="/src/assets/img/restaurant-vector.png"
+                      alt="Restaurant Scene"
+                      class="roleplay__image"
+                    />
+                  </div>
+                  <div class="roleplay__card">
+                    <div class="roleplay__card-links">
+                      <a href="#" class="roleplay__card-title text-truncate"
+                        >Family</a
+                      >
+                      <ul class="roleplay__list">
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate">Ordering Food</a>
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Making a Reservation</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Handling Complaints</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Asking about the Menu</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <img
+                      src="/src/assets/img/vector-family.svg"
+                      alt="Family Scene"
+                      class="roleplay__image"
+                    />
+                  </div>
+                  <div class="roleplay__card">
+                    <div class="roleplay__card-links">
+                      <a href="#" class="roleplay__card-title text-truncate"
+                        >Airport</a
+                      >
+                      <ul class="roleplay__list">
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate">Ordering Food</a>
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Making a Reservation</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Handling Complaints</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Asking about the Menu</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <img
+                      src="/src/assets/img/vector-Airport.svg"
+                      alt="Airport Scene"
+                      class="roleplay__image"
+                    />
+                  </div>
+                  <div class="roleplay__card">
+                    <div class="roleplay__card-links">
+                      <a href="#" class="roleplay__card-title text-truncate"
+                        >Family</a
+                      >
+                      <ul class="roleplay__list">
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate">Ordering Food</a>
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Making a Reservation</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Handling Complaints</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Asking about the Menu</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <img
+                      src="/src/assets/img/vector-family.svg"
+                      alt="Family Scene"
+                      class="roleplay__image"
+                    />
+                  </div>
+                  <div class="roleplay__card">
+                    <div class="roleplay__card-links">
+                      <a href="#" class="roleplay__card-title text-truncate"
+                        >Restaurant</a
+                      >
+                      <ul class="roleplay__list">
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate">Ordering Food</a>
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Making a Reservation</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Handling Complaints</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Asking about the Menu</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <img
+                      src="/src/assets/img/restaurant-vector.png"
+                      alt="Restaurant Scene"
+                      class="roleplay__image"
+                    />
+                  </div>
+                  <div class="roleplay__card">
+                    <div class="roleplay__card-links">
+                      <a href="#" class="roleplay__card-title text-truncate"
+                        >Family</a
+                      >
+                      <ul class="roleplay__list">
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate">Ordering Food</a>
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Making a Reservation</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Handling Complaints</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Asking about the Menu</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <img
+                      src="/src/assets/img/vector-family.svg"
+                      alt="Family Scene"
+                      class="roleplay__image"
+                    />
+                  </div>
+                  <div class="roleplay__card">
+                    <div class="roleplay__card-links">
+                      <a href="#" class="roleplay__card-title text-truncate"
+                        >Airport</a
+                      >
+                      <ul class="roleplay__list">
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate">Ordering Food</a>
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Making a Reservation</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Handling Complaints</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Asking about the Menu</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <img
+                      src="/src/assets/img/vector-Airport.svg"
+                      alt="Airport Scene"
+                      class="roleplay__image"
+                    />
+                  </div>
+                  <div class="roleplay__card">
+                    <div class="roleplay__card-links">
+                      <a href="#" class="roleplay__card-title text-truncate"
+                        >Family</a
+                      >
+                      <ul class="roleplay__list">
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate">Ordering Food</a>
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Making a Reservation</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Handling Complaints</a
+                          >
+                        </li>
+                        <li class="roleplay__item">
+                          <a href="#" class="text-truncate"
+                            >Asking about the Menu</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <img
+                      src="/src/assets/img/vector-family.svg"
+                      alt="Family Scene"
+                      class="roleplay__image"
+                    />
+                  </div>
                 </div>
+                <nav
+                  class="pagination pagination--desktop"
+                  aria-label="Pagination"
+                >
+                  <ul class="pagination__list">
+                    <!-- Previous Button -->
+
+                    <li class="pagination__item pagination__item--previous">
+                      <a
+                        class="pagination__link"
+                        href="#"
+                        aria-label="Previous"
+                      ></a>
+                    </li>
+
+                    <!-- Page Numbers for Desktop -->
+                    <li class="pagination__item pagination__item--active">
+                      <a class="pagination__link" href="#">1</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">2</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">3</a>
+                    </li>
+                    <li class="pagination__item pagination__item--dots">
+                      <span class="pagination__link">...</span>
+                    </li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">24</a>
+                    </li>
+
+                    <!-- Next Button -->
+
+                    <li class="pagination__item pagination__item--next">
+                      <a
+                        class="pagination__link"
+                        href="#"
+                        aria-label="Next"
+                      ></a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </section>
+
+            <section class="roleplay roleplay--mobile">
+              <div class="roleplay__container section__container">
+                <h2 class="roleplay__title">Explore Roleplays</h2>
+                <p class="roleplay__description">
+                  Browse our library of roleplays to practice conversations for
+                  common scenarios. Each roleplay includes key phrases,
+                  vocabulary, and example dialogues to help you build
+                  confidence.
+                </p>
+                <div class="cards-container">
+                  <div class="roleplay__card">
+                    <span class="roleplay__card-title text-truncate"
+                      >Restaurant</span
+                    >
+                    <img
+                      src="/src/assets/img/restaurant-vector.png"
+                      alt="Restaurant Scene"
+                      class="roleplay__image"
+                    />
+                    <a href="#" class="roleplay__card-link"></a>
+                  </div>
+                  <div class="roleplay__card">
+                    <span class="roleplay__card-title text-truncate"
+                      >Family</span
+                    >
+                    <img
+                      src="/src/assets/img/vector-family.svg"
+                      alt="Family Scene"
+                      class="roleplay__image"
+                    />
+                    <a href="#" class="roleplay__card-link"></a>
+                  </div>
+                  <div class="roleplay__card">
+                    <span class="roleplay__card-title text-truncate"
+                      >Airport</span
+                    >
+                    <img
+                      src="/src/assets/img/vector-Airport.svg"
+                      alt="Airport Scene"
+                      class="roleplay__image"
+                    />
+                    <a href="#" class="roleplay__card-link"></a>
+                  </div>
+                  <div class="roleplay__card">
+                    <span class="roleplay__card-title text-truncate"
+                      >Restaurant</span
+                    >
+                    <img
+                      src="/src/assets/img/restaurant-vector.png"
+                      alt="Restaurant Scene"
+                      class="roleplay__image"
+                    />
+                    <a href="#" class="roleplay__card-link"></a>
+                  </div>
+                  <div class="roleplay__card">
+                    <span class="roleplay__card-title text-truncate"
+                      >Family</span
+                    >
+                    <img
+                      src="/src/assets/img/vector-family.svg"
+                      alt="Family Scene"
+                      class="roleplay__image"
+                    />
+                    <a href="#" class="roleplay__card-link"></a>
+                  </div>
+                  <div class="roleplay__card">
+                    <span class="roleplay__card-title text-truncate"
+                      >Airport</span
+                    >
+                    <img
+                      src="/src/assets/img/vector-Airport.svg"
+                      alt="Airport Scene"
+                      class="roleplay__image"
+                    />
+                    <a href="#" class="roleplay__card-link"></a>
+                  </div>
+                </div>
+
+                <nav
+                  class="pagination pagination--mobile"
+                  aria-label="Pagination"
+                >
+                  <ul class="pagination__list">
+                    <!-- Previous Button -->
+                    <li class="pagination__item pagination__item--previous">
+                      <a
+                        class="pagination__link"
+                        href="#"
+                        aria-label="Previous"
+                      >
+                        Previous Page
+                      </a>
+                    </li>
+
+                    <!-- Page Info for Mobile -->
+                    <li class="pagination__item">
+                      <span class="pagination__info">
+                        <strong>1</strong>
+                        <span class="pagination__separator">From</span>
+                        <strong>24</strong>
+                      </span>
+                    </li>
+
+                    <li class="pagination__item pagination__item--next">
+                      <a class="pagination__link" href="#" aria-label="Next">
+                        Next Page
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </section>
 
@@ -291,11 +827,24 @@
                   <h2 class="intro-section__title">
                     Learn English with LingUp
                   </h2>
-                  <button class="intro-section__button">
+                  <div
+                    class="intro-section__image intro-section__image--mobile"
+                  >
+                    <img
+                      src="/src/assets/img/Learn English with LingUp.png"
+                      alt="Learn English with LingUp"
+                    />
+                  </div>
+                  <button
+                    type="button"
+                    class="intro-section__button"
+                    data-bs-target="#download-app-modal"
+                    data-bs-toggle="modal"
+                  >
                     Start your free trial
                   </button>
                 </div>
-                <div class="intro-section__image">
+                <div class="intro-section__image intro-section__image--desktop">
                   <img
                     src="/src/assets/img/Learn English with LingUp.png"
                     alt="Learn English with LingUp"
