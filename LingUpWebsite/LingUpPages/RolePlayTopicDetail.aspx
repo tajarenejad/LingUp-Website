@@ -200,21 +200,21 @@
             </section>
 
             <section class="conversation-topic conversation-topic--desktop">
-              <h1 class="conversation-topic__title">
-                Ordering Food: Real-Life English Conversations for ESL Learners
-              </h1>
-              <img
-                class="conversation-topic__image"
-                src="/src/assets/img/restaurant-vector.png"
-                alt="Learn English with LingUp"
-              />
-              <p class="conversation-topic__description">
-                Ordering food in English can feel intimidating at first, but
-                with practice, you can learn the phrases and vocabulary to do it
-                confidently. This page covers essential terms, key phrases,
-                sample dialogues, and practice activities to help you navigate
-                this common scenario.
-              </p>
+                <div class="section__container">
+                    <h1 class="conversation-topic__title">Ordering Food: Real-Life English Conversations for ESL Learners
+                    </h1>
+                    <img
+                        class="conversation-topic__image"
+                        src="/src/assets/img/restaurant-vector.png"
+                        alt="Learn English with LingUp" />
+                    <p class="conversation-topic__description">
+                        Ordering food in English can feel intimidating at first, but
+                        with practice, you can learn the phrases and vocabulary to do it
+                        confidently. This page covers essential terms, key phrases,
+                        sample dialogues, and practice activities to help you navigate
+                        this common scenario.
+                    </p>
+                </div>
             </section>
 
             <section class="toc">
