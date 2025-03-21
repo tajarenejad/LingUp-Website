@@ -428,14 +428,13 @@ body.modal-open {
 
 .layout--has-sidebar .layout__container {
   width: 100%;
-  max-width: 77.5rem;
+  max-width: 79.5rem;
   margin: 0 auto;
   display: flex;
   position: relative;
 }
 
 .layout__wrapper {
-  /* display: flex; */
   width: 100%;
 }
 
@@ -445,14 +444,14 @@ body.modal-open {
 }
 
 .layout--has-sidebar .layout__content {
-  padding-right: 460px;
+  padding-right: 26rem;
 }
 
 .layout__sidebar {
   position: fixed;
   top: 5.5rem;
   right: unset;
-  width: 22.5rem;
+  width: 24.5rem;
   padding-top: 5.5rem;
   padding-bottom: 2.875rem;
   padding-left: 0;
@@ -474,6 +473,11 @@ body.modal-open {
 }
 
 /* ========== Breadcrumb ========== */
+
+.breadcrumb--mobile {
+  display: none;
+}
+
 .breadcrumb {
   padding: 1rem 0;
   margin: 0;
@@ -511,7 +515,12 @@ body.modal-open {
 }
 
 /* Conversation Topic Section */
-.conversation-topic {
+
+.conversation-topic--mobile {
+  display: none;
+}
+
+.conversation-topic .section__container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -529,6 +538,7 @@ body.modal-open {
   width: 100%;
   height: auto;
   object-fit: contain;
+
 }
 
 .conversation-topic__description {
@@ -536,6 +546,46 @@ body.modal-open {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.75rem;
+}
+
+.conversation-topic--mobile .conversation-topic__description.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.conversation-topic--mobile .conversation-topic__description.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.conversation-topic__button--read-more {
+  color: var(--secondary-dark-grey-cyan);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  width: max-content;
+  transition: transform 0.3s ease;
+}
+
+.conversation-topic__button--read-more::after {
+  content: url("../img/arrow-down-secondary.svg");
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.conversation-topic__button--read-more.expanded::after {
+  transform: rotate(180deg);
 }
 
 /* ======= Table of Contents ======= */
@@ -550,7 +600,7 @@ body.modal-open {
   gap: 0.5rem;
   margin-bottom: 0.75rem;
   color: var(--green-primary);
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
@@ -668,7 +718,9 @@ body.modal-open {
   color: var(--primary-dark-blue);
 }
 
-.conversation__image {
+
+
+.conversation__image img {
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -710,10 +762,12 @@ body.modal-open {
 }
 
 .conversation__message {
+  font-size: 1rem;
   text-align: left;
 }
 
 .conversation__participant {
+  font-size: 1rem;
   font-weight: 600;
   text-align: left;
   padding-right: 16px;
@@ -761,7 +815,8 @@ body.modal-open {
   width: 240px;
   height: 240px;
   object-fit: cover;
-  border-radius: 8px;
+  object-position: center;
+  border-radius: 0.5rem;
 }
 
 .scenario__content {
@@ -877,7 +932,7 @@ body.modal-open {
 }
 
 .info-list__label {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 1rem;
@@ -904,7 +959,7 @@ body.modal-open {
 /* ==========end of TOC styles============= */
 
 .card-section {
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .card-section__title {
@@ -916,32 +971,32 @@ body.modal-open {
   color: var(--primary-dark-blue);
 }
 
-.card-container {
+.card-section .card-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-.card {
+.card-section .card {
   width: 100%;
   flex: 1 1 calc(33.33% - 1rem);
   border-radius: var(--radius-14);
   overflow: hidden;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
-    0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-1);
   transition: transform 0.3s ease-in-out;
   border: none;
+  position: relative;
 }
 
-.card:hover {
+.card-section .card:hover {
   transform: translateY(-4px);
 }
 
-.card__content {
+.card-section .card__content {
   padding: 1rem;
 }
 
-.card__meta {
+.card-section .card__meta {
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5rem;
@@ -949,34 +1004,38 @@ body.modal-open {
   opacity: 0.8;
 }
 
-.card__title {
+.card-section .card__title {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 2rem;
   color: var(--white);
 }
 
-.card__image {
+.card-section .card__image {
   width: 100%;
-  height: 141px;
+  height: 8.813rem;
   object-fit: cover;
   border-radius: 0px 0px 14px 14px;
 }
 
-.card:nth-child(1),
-.card:nth-child(5) {
-  background: #2ecc71;
+.card-section .card:nth-child(1),
+.card-section .card:nth-child(5) {
+  background: #16A085;
   color: white;
 }
 
-.card:nth-child(2),
-.card:nth-child(6) {
+.card-section .card:nth-child(4) {
+  background: var(--status-error);
+  color: white;
+}
+
+.card-section .card:nth-child(2),
+.card-section .card:nth-child(6) {
   background: #f39c12;
   color: white;
 }
 
-.card:nth-child(3),
-.card:nth-child(4) {
+.card-section .card:nth-child(3) {
   background: #3498db;
   color: white;
 }
@@ -1004,31 +1063,42 @@ body.modal-open {
   height: 24px;
 }
 
+.card-section .card .card__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* ----------------------------------- */
 .comments {
-  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
 .comments .comments__form-container,
 .comments__form {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .comments__list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .comments .comments__form-container {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .comments__submit-btn {
   border-radius: var(--radius-8);
-  padding: 14px 24px;
+  padding: 0.875rem 1.5rem;
   background: linear-gradient(277deg, #43b692 0%, #099773 95.84%);
   color: white;
   border: none;
@@ -1047,8 +1117,8 @@ body.modal-open {
 .comments__title,
 .comments__list-title {
   font-weight: 700;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 1.25rem;
+  line-height: 2rem;
   color: var(--primary-dark-blue);
 }
 
@@ -1080,7 +1150,7 @@ body.modal-open {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 textarea {
@@ -1092,7 +1162,7 @@ textarea {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  gap: 8px;
+  gap: 0.5rem;
   margin-top: 0.5rem;
 }
 
@@ -1108,7 +1178,7 @@ textarea {
 .comments__floating-label input,
 .comments__floating-label textarea {
   width: 100%;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: var(--secondary-dark-grey-cyan);
   border: 1px solid var(--primary-dark-blue);
   color: var(--primary-dark-blue);
@@ -1121,7 +1191,7 @@ textarea {
   font-weight: 400;
   position: absolute;
   pointer-events: none;
-  left: 16px;
+  left: 1rem;
   top: 50%;
   transform: translateY(-50%);
   transition: 0.2s ease all;
@@ -1238,10 +1308,10 @@ textarea {
   color: #b3261e;
   font-size: 0.75rem;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 1rem;
   margin-top: 0.5rem;
   padding: 0 1rem;
-  /* display: none; */
+  display: none;
 }
 
 .comments__group .comment--reply {
@@ -1256,13 +1326,13 @@ textarea {
 }
 
 .comment {
-  border-radius: 0px 15px 15px 15px;
+  border-radius: 0px 1rem 1rem 1rem;
   background: #eceff1;
   display: flex;
-  padding: 12px;
+  padding: 0.75rem;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
   align-self: stretch;
 }
 
@@ -1390,6 +1460,8 @@ textarea {
   display: flex;
   align-items: start;
   justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .chat__card {
@@ -1399,10 +1471,11 @@ textarea {
   border: 2px solid #ccc;
   border-radius: var(--radius-14);
   background-color: var(--white);
-  height: calc(100vh - 206px);
-  max-height: 656px;
+  min-height: 25rem;
+  height: calc(100vh - 12.875rem);
+  max-height: 41rem;
   width: 100%;
-  max-width: 360px;
+  max-width: 24.5rem;
   position: relative;
 }
 
@@ -1413,7 +1486,7 @@ textarea {
 }
 
 .chat__card .chat__card-header .chat__title {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--primary-dark-blue);
 }
@@ -1428,7 +1501,7 @@ textarea {
   overflow-x: hidden;
   overflow-y: auto;
   height: 54vh;
-  max-height: 504px;
+  max-height: 31.5rem;
 }
 
 .chat__box .chat__card .chat__card-body::-webkit-scrollbar {
@@ -1456,7 +1529,7 @@ textarea {
 }
 
 .chat__box .chat__card .chat__card-body .chat__message--user {
-  margin-left: 30px;
+  margin-left: 1.875rem;
   margin-right: 10px;
   margin-bottom: 0.5rem;
 }
@@ -2686,9 +2759,49 @@ textarea {
   color: var(--secondary-dark-grey-cyan);
 }
 
+@media (min-width: 993px) and (max-width: 1230px) {
+  .conversation-topic__title {
+    font-size: 1.5rem;
+  }
+
+  .scenario__image img {
+    width: 12rem;
+    height: 100%;
+  }
+}
+
 @media (max-width: 992px) {
+
+  .layout--has-sidebar .layout__content {
+    padding-right: 0;
+  }
+
+  .layout__sidebar {
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .chat__card {
+    min-height: 26.5rem;
+    height: 26.5rem;
+    max-height: 26.5rem;
+  }
+
+  .breadcrumb--desktop {
+    display: none;
+  }
+
+  .breadcrumb--mobile {
+    display: block;
+  }
+
   .breadcrumb {
     margin-bottom: 1rem;
+  }
+
+  .layout--has-sidebar .breadcrumb--mobile {
+    margin-bottom: 0;
+    padding: 0.5rem 0;
   }
 
   .banner {
@@ -2975,6 +3088,34 @@ textarea {
     max-width: 25.5rem;
     padding: 1rem 2rem;
   }
+
+  .conversation-topic--desktop {
+    display: none;
+  }
+
+  .conversation-topic--mobile {
+    display: block;
+  }
+
+  .conversation-topic .section__container {
+    gap: 0.5rem;
+  }
+
+  .conversation-topic__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 2rem;
+  }
+
+  .conversation-topic__description {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
+
+  .card-section .card:hover {
+    transform: none;
+  }
 }
 
 
@@ -3064,6 +3205,152 @@ textarea {
     height: 3rem;
   }
 
+  .toc__section {
+    gap: 0.75rem;
+    padding: 1rem 0;
+  }
+
+  .toc__section-title {
+    font-size: 1.25rem;
+  }
+
+  .toc__section-description {
+    font-size: 0.875rem;
+  }
+
+  .toc__section-number,
+  .toc__section-term,
+  .conversation__label {
+    font-size: 1rem;
+  }
+
+  .toc__section-definition,
+  .conversation__scene-description,
+  .conversation__participant,
+  .conversation__message,
+  .conversation__note,
+  .info-list__text,
+  .info-list__label,
+  .practice__instructions,
+  .practice__item {
+    font-size: 0.875rem;
+  }
+
+  .scenario__card {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .scenario__image img {
+    width: 100%;
+    height: 11.375rem;
+  }
+
+  .scenario__content {
+    padding: 1rem;
+  }
+
+  .scenario__heading {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .scenario__details {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .scenario__text {
+    width: 100%;
+    max-width: 100%;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    line-height: 1.5rem;
+  }
+
+  .scenario__examples a {
+    max-width: 360px;
+  }
+
+  .similar-cards-section .scenario-card {
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .similar-cards-section .scenarios__title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .similar-cards-section .scenario-card__title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+  }
+
+  .similar-cards-section .scenario-card__description {
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+  }
+
+  .similar-cards-section .scenario-card__link {
+    font-size: 0.875rem;
+
+  }
+
+  .card-section {
+    padding: 1rem 0;
+  }
+
+  .card-section .card-container {
+    gap: 0.5rem;
+  }
+
+  .card-section .card {
+    flex: 1 1 calc(50% - 0.5rem);
+  }
+
+  .card-section .card__image {
+    height: 7.5625rem;
+  }
+
+  .card-section .card__content {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .comments__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .comments__title {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .comments .comments__form-container {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .comments__form .comments__fields-group {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .comment .comment__body p {
+    font-size: 0.875rem;
+  }
+
+  .practice__activity-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
 }
 
 @media (max-width: 575px) {
@@ -3071,4 +3358,27 @@ textarea {
     margin-left: 0;
     max-width: 100%;
   }
+
+  .layout__sidebar {
+    width: 100%;
+  }
+
+  .chat__box {
+    padding: 0;
+  }
+
+  .toc__item a {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .scenario__examples a {
+    max-width: 260px;
+  }
+
+  .card-section .card__image {
+    height: 5.5625rem;
+  }
 }
+
+@media (max-width: 396px) {}

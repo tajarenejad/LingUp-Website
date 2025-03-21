@@ -1,51 +1,4 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   const swiper = new Swiper(".slide-content", {
-//     loop: true,
-//     autoplay: {
-//       delay: 5000,
-//       disableOnInteraction: false,
-//     },
-//     grabCursor: true,
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-//     spaceBetween: 24,
-//     breakpoints: {
-//       768: { slidesPerView: 1 },
-//       992: { slidesPerView: 2 },
-//       1128: { slidesPerView: 3 },
-//     },
-//   });
-//   const bgColorArray = ["#F9A825", "#16A085", "#01A6FF", "#FF6B6B"];
-//   const slides = document.querySelectorAll(".roleplay__slide.swiper-slide");
-
-//   slides.forEach((slide, index) => {
-//     const colorIndex = index % bgColorArray.length;
-//     slide.style.backgroundColor = bgColorArray[colorIndex];
-//   });
-// });
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  var breadcrumbContainer = document.querySelector(".breadcrumb__container");
-  var lastLink = document.querySelector(
-    ".breadcrumb__list .breadcrumb__item:last-child .breadcrumb__link"
-  );
-
-  if (breadcrumbContainer && lastLink) {
-    lastLink.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "end",
-    });
-    window.scrollBy(0, -50);
-  }
-});
-
-
-
-
+// -------- fixed sidebar ------------------
 function initializeSidebarFix() {
   const aside = document.querySelector(".layout--has-sidebar .layout__sidebar");
   const container = document.querySelector(
@@ -127,9 +80,43 @@ if (document.querySelector(".layout--has-sidebar .layout__sidebar")) {
   initializeSidebarFix();
 }
 
-// ===========================================
+// --------- scroll last breadcrumb ---------------
 
-// --------------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+  var breadcrumbContainer = document.querySelector(".breadcrumb__container");
+  var lastLink = document.querySelector(
+    ".breadcrumb__list .breadcrumb__item:last-child .breadcrumb__link"
+  );
+
+  if (breadcrumbContainer && lastLink) {
+    lastLink.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "end",
+    });
+    window.scrollBy(0, -50);
+  }
+});
+
+// -----------Read More - less ---------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(
+    ".conversation-topic__button--read-more"
+  );
+  button.addEventListener("click", function () {
+    const paragraph = this.parentElement.querySelector(
+      ".conversation-topic__description"
+    );
+    const isExpanded = paragraph.classList.contains("expanded");
+    paragraph.classList.toggle("expanded");
+    paragraph.classList.toggle("line-clamp-2");
+    this.classList.toggle("expanded");
+    this.textContent = isExpanded ? "Read More" : "Close";
+  });
+});
+
+// -------------- equal widths for conversation__participant ------------
 
 function setEqualWidths() {
   const participants = document.querySelectorAll(".conversation__participant");
@@ -147,58 +134,99 @@ function setEqualWidths() {
 window.addEventListener("load", setEqualWidths);
 window.addEventListener("resize", setEqualWidths);
 
-// const recordButton = document.querySelector(".chat__record");
-// const micCheckMessage = document.querySelector(".chat__mic-warning");
-// const audioRecordWrapper = document.querySelector(".chat__audio-record");
-// const spinnerWrapper = document.querySelector(".chat__spinner-container");
-// const audioWave = document.querySelector(".chat__audio-wave");
-// const audioList = document.querySelector(".audio-list");
+// ----------------translate button --------------------
 
-// let mediaRecorder;
-// let audioChunks = [];
+document.querySelectorAll(".chat__action--translate").forEach((button) => {
+  button.addEventListener("click", function () {
+    this.classList.toggle("chat__action--active");
+  });
+});
 
-// recordButton.addEventListener("click", async () => {
-//   try {
-//     const stream = await navigator.mediaDevices.getUserMedia({
-//       audio: true,
-//     });
-//     mediaRecorder = new MediaRecorder(stream);
+// -------------Like - dislike ----------------
 
-//     mediaRecorder.ondataavailable = (event) => {
-//       audioChunks.push(event.data);
-//     };
+function setupReactionGroup(container) {
+  const likeButton = container.querySelector(
+    ".comment__like-btn, .chat__reaction--like"
+  );
+  const dislikeButton = container.querySelector(
+    ".comment__dislike-btn, .chat__reaction--dislike"
+  );
 
-//     mediaRecorder.onstop = () => {
-//       const blob = new Blob(audioChunks, { type: "audio/wav" });
-//       const audioURL = URL.createObjectURL(blob);
+  if (!likeButton || !dislikeButton) return;
 
-//       const audioElement = document.createElement("audio");
-//       audioElement.src = audioURL;
-//       audioElement.controls = true;
+  likeButton.addEventListener("click", () => {
+    likeButton.classList.toggle("comment__like-btn--active");
+    likeButton.classList.toggle("chat__reaction--active");
+    dislikeButton.classList.remove("comment__dislike-btn--active");
+    dislikeButton.classList.remove("chat__reaction--active");
+  });
 
-//       audioRecordWrapper.style.display = "none";
-//       spinnerWrapper.style.display = "flex";
+  dislikeButton.addEventListener("click", () => {
+    dislikeButton.classList.toggle("comment__dislike-btn--active");
+    dislikeButton.classList.toggle("chat__reaction--active");
+    likeButton.classList.remove("comment__like-btn--active");
+    likeButton.classList.remove("chat__reaction--active");
+  });
+}
 
-//       setTimeout(() => {
-//         audioList.appendChild(audioElement);
-//         spinnerWrapper.style.display = "none";
-//         recordButton.style.display = "flex";
-//         micCheckMessage.style.display = "none";
-//         audioChunks = [];
-//       }, 3000);
-//     };
+document
+  .querySelectorAll(".comment__reactions, .chat__reactions")
+  .forEach(setupReactionGroup);
 
-//     mediaRecorder.start();
-//     recordButton.style.display = "none";
-//     audioRecordWrapper.style.display = "flex";
-//     micCheckMessage.style.display = "none";
-//   } catch (error) {
-//     console.error("Error accessing microphone:", error);
-//     recordButton.style.display = "none";
-//     micCheckMessage.style.display = "flex";
-//   }
-// });
+// --------------------Record voice----------------------------
 
-// audioRecordWrapper.addEventListener("click", () => {
-//   mediaRecorder.stop();
-// });
+const recordButton = document.querySelector(".chat__record");
+const micCheckMessage = document.querySelector(".chat__mic-warning");
+const audioRecordWrapper = document.querySelector(".chat__audio-record");
+const spinnerWrapper = document.querySelector(".chat__spinner-container");
+const audioWave = document.querySelector(".chat__audio-wave");
+const audioList = document.querySelector(".audio-list");
+
+let mediaRecorder;
+let audioChunks = [];
+
+recordButton.addEventListener("click", async () => {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({
+      audio: true,
+    });
+    mediaRecorder = new MediaRecorder(stream);
+
+    mediaRecorder.ondataavailable = (event) => {
+      audioChunks.push(event.data);
+    };
+
+    mediaRecorder.onstop = () => {
+      const blob = new Blob(audioChunks, { type: "audio/wav" });
+      const audioURL = URL.createObjectURL(blob);
+
+      const audioElement = document.createElement("audio");
+      audioElement.src = audioURL;
+      audioElement.controls = true;
+
+      audioRecordWrapper.style.display = "none";
+      spinnerWrapper.style.display = "flex";
+
+      setTimeout(() => {
+        audioList.appendChild(audioElement);
+        spinnerWrapper.style.display = "none";
+        recordButton.style.display = "flex";
+        micCheckMessage.style.display = "none";
+        audioChunks = [];
+      }, 3000);
+    };
+
+    mediaRecorder.start();
+    recordButton.style.display = "none";
+    audioRecordWrapper.style.display = "flex";
+    micCheckMessage.style.display = "none";
+  } catch (error) {
+    console.error("Error accessing microphone:", error);
+    recordButton.style.display = "none";
+    micCheckMessage.style.display = "flex";
+  }
+});
+
+audioRecordWrapper.addEventListener("click", () => {
+  mediaRecorder.stop();
+});
