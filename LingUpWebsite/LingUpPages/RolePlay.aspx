@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LingUpPages/LingUp.Master" AutoEventWireup="true" CodeBehind="RolePlay.aspx.cs" Inherits="LingUpWebsite.LingUpPages.RolePlay" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-       <main class="layout">
+         <main class="layout">
       <div class="layout__container">
         <div class="layout__wrapper">
           <div class="layout__content">
@@ -856,4 +856,30 @@
         </div>
       </div>
     </main>
+
+    <script>
+      const bgColorArray = ["#F9A825", "#16A085", "#01A6FF", "#FF6B6B"];
+      const cards = document.querySelectorAll(".roleplay__card");
+
+      function getColumnCount() {
+        return window.innerWidth <= 992 ? 2 : 4;
+      }
+
+      // Function to assign colors dynamically based on grid layout
+      function applyColors() {
+        const cols = getColumnCount();
+        const rows = Math.ceil(cards.length / cols);
+
+        cards.forEach((card, index) => {
+          const row = Math.floor(index / cols);
+          const col = index % cols;
+          const colorIndex = (row + col) % bgColorArray.length;
+          card.style.backgroundColor = bgColorArray[colorIndex];
+        });
+      }
+
+      applyColors();
+
+      window.addEventListener("resize", applyColors);
+    </script>
 </asp:Content>

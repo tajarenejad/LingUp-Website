@@ -184,7 +184,6 @@
     <Content Include="src\assets\css\bootstrap-reboot.min.css" />
     <Content Include="src\assets\css\bootstrap.min.css" />
     <Content Include="src\assets\css\styles.css" />
-    <Content Include="src\assets\fonts\Roboto\LICENSE.txt" />
     <Content Include="src\assets\img\3d.png" />
     <Content Include="src\assets\img\appstore-download.svg" />
     <Content Include="src\assets\img\arrow-bold-white.svg" />
@@ -192,9 +191,7 @@
     <Content Include="src\assets\img\arrow-down-line-secondary.svg" />
     <Content Include="src\assets\img\arrow-down-secondary.svg" />
     <Content Include="src\assets\img\arrow-right-bold-green.svg" />
-    <Content Include="src\assets\img\arrow-rounded-square-secondary.svg" />
     <Content Include="src\assets\img\arrows-right-white-icon.svg" />
-    <Content Include="src\assets\img\best-friend-vector.svg" />
     <Content Include="src\assets\img\canada-flag.svg" />
     <Content Include="src\assets\img\circle-green.svg" />
     <Content Include="src\assets\img\clipboard-list-bold.svg" />
@@ -204,8 +201,6 @@
     <Content Include="src\assets\img\dislike-outline-bold.svg" />
     <Content Include="src\assets\img\dislike-outline.svg" />
     <Content Include="src\assets\img\email-sign.svg" />
-    <Content Include="src\assets\img\family-vector.svg" />
-    <Content Include="src\assets\img\house-vector.svg" />
     <Content Include="src\assets\img\info-circle-linear.svg" />
     <Content Include="src\assets\img\Learn English with LingUp.png" />
     <Content Include="src\assets\img\like-outline-bold.svg" />
@@ -214,7 +209,6 @@
     <Content Include="src\assets\img\LingUpLogo.svg" />
     <Content Include="src\assets\img\Logo-Vector.svg" />
     <Content Include="src\assets\img\mic-icon.svg" />
-    <Content Include="src\assets\img\native-speaker-icon.svg" />
     <Content Include="src\assets\img\Orderingfood-vector.png" />
     <Content Include="src\assets\img\phonecall-vector.png" />
     <Content Include="src\assets\img\playstore-download.svg" />
@@ -331,17 +325,23 @@
     <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.0.min.map" />
     <Content Include="src\assets\fonts\Roboto\Roboto-Black.ttf" />
-    <Content Include="src\assets\fonts\Roboto\Roboto-BlackItalic.ttf" />
     <Content Include="src\assets\fonts\Roboto\Roboto-Bold.ttf" />
-    <Content Include="src\assets\fonts\Roboto\Roboto-BoldItalic.ttf" />
-    <Content Include="src\assets\fonts\Roboto\Roboto-Italic.ttf" />
     <Content Include="src\assets\fonts\Roboto\Roboto-Light.ttf" />
-    <Content Include="src\assets\fonts\Roboto\Roboto-LightItalic.ttf" />
     <Content Include="src\assets\fonts\Roboto\Roboto-Medium.ttf" />
-    <Content Include="src\assets\fonts\Roboto\Roboto-MediumItalic.ttf" />
     <Content Include="src\assets\fonts\Roboto\Roboto-Regular.ttf" />
     <Content Include="src\assets\fonts\Roboto\Roboto-Thin.ttf" />
-    <Content Include="src\assets\fonts\Roboto\Roboto-ThinItalic.ttf" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-Black.woff2" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-Bold.woff2" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-ExtraBold.ttf" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-ExtraBold.woff2" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-ExtraLight.ttf" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-ExtraLight.woff2" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-Light.woff2" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-Medium.woff2" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-Regular.woff2" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-SemiBold.ttf" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-SemiBold.woff2" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-Thin.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

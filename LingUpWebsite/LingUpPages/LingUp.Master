@@ -14,9 +14,7 @@
     <link rel="stylesheet" href="/src/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/src/assets/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="/src/assets/css/styles.css">
-    <script src="/src/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="/src/assets/js/jquery-3.7.1.min.js"></script>
-    <script src="/src/assets/js/script.js"></script>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -144,5 +142,47 @@
         </div>
       </div>
     </footer>
+
+    <script src="/src/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/src/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/src/assets/js/script.js"></script>
+
+     <!-- Modal -->
+    <div
+      class="modal fade download-modal"
+      id="download-app-modal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal__dialog modal-dialog modal-dialog-centered">
+        <div class="modal__content modal-content">
+          <div class="modal__body modal-body">
+            <button
+              type="button"
+              class="modal__close-btn btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <h2 class="download-modal__title">Get Started for Free!</h2>
+            <div class="download-modal__apps">
+              <a href="#" class="download-modal__link">
+                <img
+                  class="download-modal__image"
+                  src="/src/assets/img/playstore-download.svg"
+                  alt="Get Lingup on Google Play"
+                />
+              </a>
+              <a href="#" class="download-modal__link">
+                <img
+                  class="download-modal__image"
+                  src="/src/assets/img/appstore-download.svg"
+                  alt="Download Lingup on the App Store"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 </html>
