@@ -101,19 +101,21 @@ document.addEventListener("DOMContentLoaded", function () {
 // -----------Read More - less ---------------------
 
 document.addEventListener("DOMContentLoaded", function () {
-  const button = document.querySelector(
+  const readMoreButton = document.querySelector(
     ".conversation-topic__button--read-more"
   );
-  button.addEventListener("click", function () {
-    const paragraph = this.parentElement.querySelector(
-      ".conversation-topic__description"
-    );
-    const isExpanded = paragraph.classList.contains("expanded");
-    paragraph.classList.toggle("expanded");
-    paragraph.classList.toggle("line-clamp-2");
-    this.classList.toggle("expanded");
-    this.textContent = isExpanded ? "Read More" : "Close";
-  });
+  if (readMoreButton) {
+    readMoreButton.addEventListener("click", function () {
+      const paragraph = this.parentElement.querySelector(
+        ".conversation-topic__description"
+      );
+      const isExpanded = paragraph.classList.contains("expanded");
+      paragraph.classList.toggle("expanded");
+      paragraph.classList.toggle("line-clamp-2");
+      this.classList.toggle("expanded");
+      this.textContent = isExpanded ? "Read More" : "Close";
+    });
+  }
 });
 
 // -------------- equal widths for conversation__participant ------------
@@ -185,48 +187,79 @@ const audioList = document.querySelector(".audio-list");
 let mediaRecorder;
 let audioChunks = [];
 
-recordButton.addEventListener("click", async () => {
-  try {
-    const stream = await navigator.mediaDevices.getUserMedia({
-      audio: true,
-    });
-    mediaRecorder = new MediaRecorder(stream);
+if (recordButton) {
+  recordButton.addEventListener("click", async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({
+        audio: true,
+      });
+      mediaRecorder = new MediaRecorder(stream);
 
-    mediaRecorder.ondataavailable = (event) => {
-      audioChunks.push(event.data);
-    };
+      mediaRecorder.ondataavailable = (event) => {
+        audioChunks.push(event.data);
+      };
 
-    mediaRecorder.onstop = () => {
-      const blob = new Blob(audioChunks, { type: "audio/wav" });
-      const audioURL = URL.createObjectURL(blob);
+      mediaRecorder.onstop = () => {
+        const blob = new Blob(audioChunks, { type: "audio/wav" });
+        const audioURL = URL.createObjectURL(blob);
 
-      const audioElement = document.createElement("audio");
-      audioElement.src = audioURL;
-      audioElement.controls = true;
+        const audioElement = document.createElement("audio");
+        audioElement.src = audioURL;
+        audioElement.controls = true;
 
-      audioRecordWrapper.style.display = "none";
-      spinnerWrapper.style.display = "flex";
+        audioRecordWrapper.style.display = "none";
+        spinnerWrapper.style.display = "flex";
 
-      setTimeout(() => {
-        audioList.appendChild(audioElement);
-        spinnerWrapper.style.display = "none";
-        recordButton.style.display = "flex";
-        micCheckMessage.style.display = "none";
-        audioChunks = [];
-      }, 3000);
-    };
+        setTimeout(() => {
+          audioList.appendChild(audioElement);
+          spinnerWrapper.style.display = "none";
+          recordButton.style.display = "flex";
+          micCheckMessage.style.display = "none";
+          audioChunks = [];
+        }, 3000);
+      };
 
-    mediaRecorder.start();
-    recordButton.style.display = "none";
-    audioRecordWrapper.style.display = "flex";
-    micCheckMessage.style.display = "none";
-  } catch (error) {
-    console.error("Error accessing microphone:", error);
-    recordButton.style.display = "none";
-    micCheckMessage.style.display = "flex";
-  }
-});
+      mediaRecorder.start();
+      recordButton.style.display = "none";
+      audioRecordWrapper.style.display = "flex";
+      micCheckMessage.style.display = "none";
+    } catch (error) {
+      console.error("Error accessing microphone:", error);
+      recordButton.style.display = "none";
+      micCheckMessage.style.display = "flex";
+    }
+  });
+}
 
-audioRecordWrapper.addEventListener("click", () => {
-  mediaRecorder.stop();
+if (audioRecordWrapper) {
+  audioRecordWrapper.addEventListener("click", () => {
+    mediaRecorder.stop();
+  });
+}
+
+// ---------------- toc__list ----------------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navbarHeight = 5.5 * 16;
+  const links = document.querySelectorAll(".toc__list a");
+
+  if (links.length === 0) return;
+
+  links.forEach((link) => {
+    const targetId = link.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection) {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const targetPosition = targetSection.offsetTop - navbarHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      });
+    }
+  });
 });
